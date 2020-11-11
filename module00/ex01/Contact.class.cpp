@@ -35,7 +35,7 @@ void Contact::input(void) {
 	// std::cout << "Underwear: ";	std::cin >> underwear_color;	std::cin.ignore();
 	// std::cout << "Secret: ";	std::cin >> darkest_secret;
 
-	std::cin.ignore();
+	// std::cin.ignore();
 	std::cout << "First name: ";	getline(std::cin, first_name, '\n');
 	std::cout << "Last name: ";		getline(std::cin, last_name, '\n');
 	std::cout << "Nickname: ";		getline(std::cin, nickname, '\n');
