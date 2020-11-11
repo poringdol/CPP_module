@@ -2,7 +2,7 @@ SHELL = /bin/sh
 
 CC = clang++
 RM = rm -rf
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -g
 
 NAME = phonebook
 SRC = phonebook.cpp \

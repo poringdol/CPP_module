@@ -9,7 +9,10 @@ int	main(void) {
 
 	while (1) {
 		std::cout << "Enter command : ";
-		getline(std::cin, input, '\n');
+		if (!getline(std::cin, input, '\n')) {
+			std::cout << std::endl;
+			exit(0);
+		}
 		if (input == "EXIT") {
 			exit(0);
 		} else if (input == "ADD") {
@@ -19,15 +22,12 @@ int	main(void) {
 			std::cout << "Enter contact index: ";
 			int	index;
 			std::cin >> index;
+			std::cin.ignore();
 			if (!std::cin || index < 0 || index >= BOOK_SIZE) {
 				std::cout << "Wrong index. Shoud be >= 0 && < 8" << std::endl;
-       			std::cin.clear();
-				while (std::cin.get() != '\n');
-			} else {
-				std::cout << std::endl;
-				phonebook.print(index);
-				std::cout << std::endl;
+				continue;
 			}
+			phonebook.print(index);
 		} else {
 			std::cerr << "Wrong command" << std::endl;
 		}
