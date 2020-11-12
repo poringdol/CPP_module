@@ -22,15 +22,4 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
-
-	// {
-	// 	Weapon club;
-	// 	std::cout << club.getType() << std::endl;
-	// }
-	// {
-	// 	Weapon club = Weapon("crude spiked club");
-	// 	std::cout << club.getType() << std::endl;
-	// 	club.setType("another club type");
-	// 	std::cout << club.getType() << std::endl;
-	// }
 }
