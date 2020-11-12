@@ -10,8 +10,8 @@ public:
 	void attack() const;
 
 private:
-	std::string	name;
-	Weapon		*weapon;
+	std::string	 name;
+	const Weapon &weapon;
 };
 
 #endif
