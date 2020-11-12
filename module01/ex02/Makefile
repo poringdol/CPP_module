@@ -1,5 +1,10 @@
 SHELL = /bin/sh
 
+B&W = \033[0;0m
+RED =  \033[0;31m
+GREEN = \033[0;32m
+PURPLE = \033[0;35m
+
 CC = clang++
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
@@ -14,9 +19,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
+	@echo "$(GREEN)  Executable $(PURPLE)$(NAME) $(GREEN)created  $(B&W)"
 	
 %.o: %.cpp
 	@$(CC) -c $< -o $@ $(FLAGS)
+	@echo "$(GREEN)  Object file $(PURPLE)$@ $(GREEN)created  $(B&W)"
 
 clean:
 	$(RM) $(OBJ)

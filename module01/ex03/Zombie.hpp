@@ -6,7 +6,7 @@
 class Zombie {
 public:
 	Zombie();
-	Zombie(const std::string& z_name, const std::string& z_type);
+	Zombie(const std::string &z_name, const std::string &z_type);
 	void randomChump();
 	std::string GetName() const;
 	std::string GetType() const;

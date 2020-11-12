@@ -8,9 +8,9 @@ ZombieHorde::ZombieHorde(int n) {
 	if (n < 1)
 		throw std::invalid_argument("Wrong nunber of zombies");
 	horde = new Zombie[n];
+	srand(time(0));
 	for (int i = 0; i < n; i++) {
 		horde[i].randomChump();
-		usleep(1000000);
 	}
 	count = n;
 }

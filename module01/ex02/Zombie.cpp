@@ -7,7 +7,7 @@ Zombie::Zombie() {
 	type = "default_type";
 }
 
-Zombie::Zombie(const std::string& z_name, const std::string& z_type) {
+Zombie::Zombie(const std::string &z_name, const std::string &z_type) {
 	name = z_name;
 	type = z_type;
 }

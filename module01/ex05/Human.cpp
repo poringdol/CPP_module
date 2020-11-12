@@ -8,7 +8,7 @@ Human::Human(int n_volume, int n_weight) {
 	Brain brain(n_volume, n_weight);
 }
 
-const Brain& Human::getBrain() const {
+const Brain &Human::getBrain() const {
 	return (brain);
 }
 std::string Human::identify() const {

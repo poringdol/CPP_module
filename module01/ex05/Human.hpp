@@ -8,7 +8,7 @@ class Human {
 public:
 	Human();
 	Human(int n_volume, int n_weight);
-	const Brain& getBrain() const;
+	const Brain &getBrain() const;
 	std::string identify() const;
 
 private:

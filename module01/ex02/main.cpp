@@ -19,7 +19,6 @@ std::string names[10] = {
 };
 
 Zombie randomChump() {
-	srand(time(NULL));
 	Zombie new_zombie(names[rand() % 10], "legend");
 	new_zombie.announce();
 	return (new_zombie);
@@ -50,10 +49,9 @@ int main() {
 
 	std::cout << "<< Check Random >>" << std::endl;
 	{
+		srand(time(NULL));
 		Zombie zombie_3 = randomChump();
-		usleep(1000000);
 		Zombie zombie_4 = randomChump();
-		usleep(1000000);
 		Zombie zombie_5 = randomChump();
 		std::cout << "Zombie band: " <<
 						zombie_3.GetName() << ", " <<

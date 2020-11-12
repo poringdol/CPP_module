@@ -8,7 +8,7 @@ Zombie::Zombie() {
 	type = "default_type";
 }
 
-Zombie::Zombie(const std::string& z_name, const std::string& z_type) {
+Zombie::Zombie(const std::string &z_name, const std::string &z_type) {
 	name = z_name;
 	type = z_type;
 }
@@ -20,7 +20,6 @@ void Zombie::announce() const {
 void Zombie::randomChump() {
 	std::string names[10] = {"Chester", "Dolores", "Keith", "Kurt", "Freddie",
 							   "Victor", "Egor", "Amy", "Michael", "Elvis"};
-	srand(time(0));
 	name = names[rand() % 10];
 	type = "legend";
 }
