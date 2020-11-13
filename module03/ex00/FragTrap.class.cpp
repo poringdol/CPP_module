@@ -7,7 +7,7 @@ FragTrap::FragTrap() : name("noname") {
 }
 
 FragTrap::FragTrap(const std::string &new_name) : name(new_name) {
-	std::cout << "🤖 FR4G-TP " << name << " created" << std::endl;
+	std::cout << "🤖 FR4G-TP " << new_name << " created" << std::endl;
 }
 
 void FragTrap::rangedAttack(std::string const &target) {
@@ -56,5 +56,5 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "💔 " << name << ": FR4G-TP " << name << " destroyed" << std::endl;
+	std::cout << "💔 FR4G-TP " << name << " destroyed" << std::endl;
 }

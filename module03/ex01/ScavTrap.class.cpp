@@ -3,11 +3,12 @@
 #include "ScavTrap.class.hpp"
 
 ScavTrap::ScavTrap() : name("noname") {
+	(void)level;
 	std::cout << "🤖 Nameless SC4V-TP created" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &new_name) : name(new_name) {
-	std::cout << "🤖 SC4V-TP " << name << " created" << std::endl;
+	std::cout << "🤖 SC4V-TP " << new_name << " created" << std::endl;
 }
 
 void ScavTrap::rangedAttack(std::string const &target) {
@@ -48,7 +49,7 @@ void ScavTrap::beRepaired(unsigned amount) {
 
 void ScavTrap::challengeNewcomer(std::string const &target) {
 	if (energy_points >= 25) {
-		std::cout << "💥 " << name << ": " << target << "! " << random_attack[rand() % 8] << std::endl;
+		std::cout << "💥 " << name << ": " << target << "! " << random_attack[rand() % 9] << std::endl;
 		energy_points -= 25;
 	} else {
 		std::cout << "⛔ " << name << ": Where'd all my bullets go?" << std::endl;
@@ -56,5 +57,5 @@ void ScavTrap::challengeNewcomer(std::string const &target) {
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "💔 " << name << ": SC4V-TP " << name << " destroyed" << std::endl;
+	std::cout << "💔 SC4V-TP " << name << " destroyed" << std::endl;
 }

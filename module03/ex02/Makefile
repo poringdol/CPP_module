@@ -12,7 +12,8 @@ FLAGS = -Wall -Werror -Wextra -g
 NAME = scavtrap
 SRC = main.cpp \
 	  FragTrap.class.cpp \
-	  ScavTrap.class.cpp
+	  ScavTrap.class.cpp \
+	  ClapTrap.class.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
