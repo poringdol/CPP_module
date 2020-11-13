@@ -1,18 +1,18 @@
 SHELL = /bin/sh
 
 B&W = \033[0;0m
-RED =  \033[0;31m
+RED  = \033[0;31m
 GREEN = \033[0;32m
 PURPLE = \033[0;35m
 
 CC = clang++
 RM = rm -rf
-FLAGS = -Wall -Werror -Wextra -g
-
-NAME = zombie
+# FLAGS = -Wall -Werror -Wextra -g
+FLAGS = -g
+NAME = scavtrap
 SRC = main.cpp \
-	  Zombie.cpp \
-	  ZombieHorde.cpp
+	  FragTrap.class.cpp \
+	  ScavTrap.class.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
