@@ -8,14 +8,7 @@
 NinjaTrap::NinjaTrap() {
 	std::cout << "🤖🤖 Nameless NINJA created" << std::endl;
 	name = "noname";
-	hit_points = 60;
- 	max_hit_points = 60;
-	energy_points = 120;
-	max_energy_points = 120;
-	level = 1;
-	melee_attack_damage = 60;
-	ranged_attack_damage = 5;
-	armor_damage_reduction = 0;
+	initNinjaTrap();
 }
 
 NinjaTrap::NinjaTrap(const std::string &new_name) {
@@ -41,15 +34,24 @@ NinjaTrap& NinjaTrap::operator=(const NinjaTrap &ninjatrap) {
 	return (*this);
 }
 
+void NinjaTrap::setHitPoints(int i) {hit_points = i;}
+void NinjaTrap::setMaxHitPoints(int i) {max_hit_points = i;}
+void NinjaTrap::setEnergyPoints(int i) {energy_points = i;}
+void NinjaTrap::setMaxEnergyPoints(int i) {max_energy_points = i;}
+void NinjaTrap::setLevel(int i) {level = i;}
+void NinjaTrap::setMeleeAttackDamage(int i) {melee_attack_damage = i;}
+void NinjaTrap::setRangedAttackDamage(int i) {ranged_attack_damage = i;}
+void NinjaTrap::setArmorDamageReduction(int i) {armor_damage_reduction = i;}
+
 void NinjaTrap::initNinjaTrap() {
-	hit_points = 60;
- 	max_hit_points = 60;
-	energy_points = 120;
-	max_energy_points = 120;
-	level = 1;
-	melee_attack_damage = 60;
-	ranged_attack_damage = 5;
-	armor_damage_reduction = 0;
+	setHitPoints();
+	setMaxHitPoints();
+	setEnergyPoints();
+	setMaxEnergyPoints();
+	setLevel();
+	setMeleeAttackDamage();
+	setRangedAttackDamage();
+	setArmorDamageReduction();
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap &claptrap, std::string const &target) {

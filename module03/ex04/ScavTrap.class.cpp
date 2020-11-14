@@ -31,15 +31,24 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &scavtrap) {
 	return (*this);
 }
 
+void ScavTrap::setHitPoints(int i) {hit_points = i;}
+void ScavTrap::setMaxHitPoints(int i) {max_hit_points = i;}
+void ScavTrap::setEnergyPoints(int i) {energy_points = i;}
+void ScavTrap::setMaxEnergyPoints(int i) {max_energy_points = i;}
+void ScavTrap::setLevel(int i) {level = i;}
+void ScavTrap::setMeleeAttackDamage(int i) {melee_attack_damage = i;}
+void ScavTrap::setRangedAttackDamage(int i) {ranged_attack_damage = i;}
+void ScavTrap::setArmorDamageReduction(int i) {armor_damage_reduction = i;}
+
 void ScavTrap::initScavTrap() {
-	hit_points = 100;
- 	max_hit_points = 100;
-	energy_points = 50;
-	max_energy_points = 50;
-	level = 1;
-	melee_attack_damage = 20;
-	ranged_attack_damage = 15;
-	armor_damage_reduction = 3;
+	setHitPoints();
+	setMaxHitPoints();
+	setEnergyPoints();
+	setMaxEnergyPoints();
+	setLevel();
+	setMeleeAttackDamage();
+	setRangedAttackDamage();
+	setArmorDamageReduction();
 }
 
 void ScavTrap::challengeNewcomer(std::string const &target) {

@@ -6,6 +6,15 @@
 
 class FragTrap : virtual public ClapTrap {
 protected:
+	void setHitPoints(int i = 100);
+	void setMaxHitPoints(int i = 100);
+	void setEnergyPoints(int i = 100);
+	void setMaxEnergyPoints(int i = 100);
+	void setLevel(int i = 1);
+	void setMeleeAttackDamage(int i = 30);
+	void setRangedAttackDamage(int i = 20);
+	void setArmorDamageReduction(int i = 5);
+	void initFragTrap();
 	std::string	random_attack[9] = {"Come over here, I'll gnaw your legs off!",
 									"I fart rainbows! Bask in my aura of death!",
 									"Lightening! Kukachow! Zippity doodah!",
@@ -24,7 +33,6 @@ public:
 
 	FragTrap& operator=(const FragTrap &fragtrap);
 
-	void initFragTrap();
 	void vaulthunter_dot_exe(std::string const &target);
 };
 

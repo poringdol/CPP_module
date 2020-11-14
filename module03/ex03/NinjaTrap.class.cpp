@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include "ClapTrap.class.hpp"
-#include "ninjatrap.class.hpp"
+#include "FragTrap.class.hpp"
 #include "ScavTrap.class.hpp"
 #include "NinjaTrap.class.hpp"
 
@@ -52,7 +52,7 @@ void NinjaTrap::initNinjaTrap() {
 	armor_damage_reduction = 0;
 }
 
-void NinjaTrap::ninjaShoebox(ninjatrap &claptrap, std::string const &target) {
+void NinjaTrap::ninjaShoebox(FragTrap &claptrap, std::string const &target) {
 	claptrap.vaulthunter_dot_exe(target);
 }
 

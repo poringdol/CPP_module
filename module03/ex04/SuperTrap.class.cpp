@@ -34,14 +34,14 @@ SuperTrap& SuperTrap::operator=(const SuperTrap &supertrap) {
 }
 
 void SuperTrap::initSuperTrap() {
-	hit_points = FragTrap::hit_points;
- 	max_hit_points = FragTrap::max_hit_points;
-	energy_points = NinjaTrap::energy_points;
-	max_energy_points = NinjaTrap::max_energy_points;
-	level = 1;
-	melee_attack_damage = NinjaTrap::melee_attack_damage;
-	ranged_attack_damage = FragTrap::ranged_attack_damage;
-	armor_damage_reduction = FragTrap::armor_damage_reduction;
+	FragTrap::setHitPoints();
+	FragTrap::setMaxHitPoints();
+	NinjaTrap::setEnergyPoints();
+	NinjaTrap::setMaxEnergyPoints();
+	FragTrap::setLevel();
+	NinjaTrap::setMeleeAttackDamage();
+	FragTrap::setRangedAttackDamage();
+	FragTrap::setArmorDamageReduction();
 }
 
 void SuperTrap::rangedAttack(std::string const &target) const {

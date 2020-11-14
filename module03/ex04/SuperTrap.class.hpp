@@ -8,6 +8,9 @@
 
 
 class SuperTrap : public NinjaTrap, public FragTrap {
+private:
+	void initSuperTrap();
+
 public:
 	SuperTrap();
 	SuperTrap(std::string const &new_name);
@@ -16,7 +19,6 @@ public:
 
 	SuperTrap& operator=(const SuperTrap &supertrap);
 	
-	void initSuperTrap();
 	void rangedAttack(std::string const &target) const;
 	void meleeAttack(std::string const &target) const;
 	void challengeNewcomer(std::string const &target);

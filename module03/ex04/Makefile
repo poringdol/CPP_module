@@ -26,8 +26,8 @@ HEADER = FragTrap.class.hpp \
 
 all: $(NAME)
 
-$(NAME):
-	@$(CC) $(SRC) -o $(NAME) $(FLAGS)
+$(NAME): $(OBJ)
+	@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
 	@echo "$(GREEN)  Executable $(PURPLE)$(NAME) $(GREEN)created  $(B&W)"
 	
 %.o: %.cpp $(HEADER)

@@ -17,18 +17,13 @@ int main() {
 	supertrap.meleeAttack(frag);
 	supertrap.takeDamage(5);
 	supertrap.takeDamage(65);
-	supertrap.takeDamage(65);
-	supertrap.rangedAttack(frag);
-	supertrap.beRepaired(60);
-	supertrap.beRepaired(60);
-	supertrap.rangedAttack(frag);
 	supertrap.vaulthunter_dot_exe(frag);
 	supertrap.vaulthunter_dot_exe(frag);
 	supertrap.ninjaShoebox(ninja, frag);
 	supertrap.ninjaShoebox(fragtrap, frag);
 	supertrap.ninjaShoebox(claptrap, frag);
-	supertrap.beRepaired(60);
-	supertrap.vaulthunter_dot_exe(frag);
-	supertrap.vaulthunter_dot_exe(frag);
+	// supertrap.beRepaired(60);
+	// supertrap.vaulthunter_dot_exe(frag);
+	// supertrap.vaulthunter_dot_exe(frag);
 
 }

@@ -31,15 +31,24 @@ FragTrap& FragTrap::operator=(const FragTrap &fragtrap) {
 	return (*this);
 }
 
+void FragTrap::setHitPoints(int i) {hit_points = i;}
+void FragTrap::setMaxHitPoints(int i) {max_hit_points = i;}
+void FragTrap::setEnergyPoints(int i) {energy_points = i;}
+void FragTrap::setMaxEnergyPoints(int i) {max_energy_points = i;}
+void FragTrap::setLevel(int i) {level = i;}
+void FragTrap::setMeleeAttackDamage(int i) {melee_attack_damage = i;}
+void FragTrap::setRangedAttackDamage(int i) {ranged_attack_damage = i;}
+void FragTrap::setArmorDamageReduction(int i) {armor_damage_reduction = i;}
+
 void FragTrap::initFragTrap() {
-	hit_points = 100;
-	max_hit_points = 100;
-	energy_points = 100;
-	max_energy_points = 100;
-	level = 1;
-	melee_attack_damage = 30;
-	ranged_attack_damage = 20;
-	armor_damage_reduction = 5;
+	setHitPoints();
+	setMaxHitPoints();
+	setEnergyPoints();
+	setMaxEnergyPoints();
+	setLevel();
+	setMeleeAttackDamage();
+	setRangedAttackDamage();
+	setArmorDamageReduction();
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target) {
