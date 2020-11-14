@@ -8,21 +8,29 @@ PURPLE = \033[0;35m
 CC = clang++
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
-# FLAGS = -g
+
 NAME = claptrap
 SRC = main.cpp \
 	  FragTrap.class.cpp \
 	  ScavTrap.class.cpp \
-	  ClapTrap.class.cpp
+	  ClapTrap.class.cpp \
+	 NinjaTrap.class.cpp \
+	 SuperTrap.class.cpp
 OBJ = $(SRC:.cpp=.o)
+HEADER = FragTrap.class.hpp \
+		 ScavTrap.class.hpp \
+		 ClapTrap.class.hpp \
+		NinjaTrap.class.hpp \
+		SuperTrap.class.hpp
+		 
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
+$(NAME):
+	@$(CC) $(SRC) -o $(NAME) $(FLAGS)
 	@echo "$(GREEN)  Executable $(PURPLE)$(NAME) $(GREEN)created  $(B&W)"
 	
-%.o: %.cpp
+%.o: %.cpp $(HEADER)
 	@$(CC) -c $< -o $@ $(FLAGS)
 	@echo "$(GREEN)  Object file $(PURPLE)$@ $(GREEN)created  $(B&W)"
 

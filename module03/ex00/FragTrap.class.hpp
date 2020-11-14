@@ -28,12 +28,16 @@ private:
 public:
 	FragTrap();
 	FragTrap(std::string const &new_name);
-	void rangedAttack(std::string const &target);
-	void meleeAttack(std::string const &target);
+	FragTrap(const FragTrap &fragtrap);
+	~FragTrap();
+	
+	FragTrap& operator=(const FragTrap &fragtrap);
+	
+	void rangedAttack(std::string const &target) const;
+	void meleeAttack(std::string const &target) const;
 	void takeDamage(unsigned amount);
 	void beRepaired(unsigned amount);
 	void vaulthunter_dot_exe(std::string const &target);
-	~FragTrap();
 };
 
 #endif

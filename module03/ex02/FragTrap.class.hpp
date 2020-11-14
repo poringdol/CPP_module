@@ -19,8 +19,13 @@ private:
 public:
 	FragTrap();
 	FragTrap(std::string const &new_name);
-	void vaulthunter_dot_exe(std::string const &target);
+	FragTrap(const FragTrap &fragtrap);
 	~FragTrap();
+
+	FragTrap& operator=(const FragTrap &fragtrap);
+
+	void initFragTrap();
+	void vaulthunter_dot_exe(std::string const &target);
 };
 
 #endif

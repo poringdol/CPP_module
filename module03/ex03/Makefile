@@ -8,12 +8,13 @@ PURPLE = \033[0;35m
 CC = clang++
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
-# FLAGS = -g
+
 NAME = claptrap
 SRC = main.cpp \
 	  FragTrap.class.cpp \
 	  ScavTrap.class.cpp \
-	  ClapTrap.class.cpp
+	  ClapTrap.class.cpp \
+	 NinjaTrap.class.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

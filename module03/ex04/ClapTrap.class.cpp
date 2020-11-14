@@ -3,11 +3,28 @@
 #include "ClapTrap.class.hpp"
 
 ClapTrap::ClapTrap() : name("noname") {
-	std::cout << "🤖🤖 Nameless CLAPTRAP created" << std::endl;
+	std::cout << "🤖🤖🤖 Nameless CLAPTRAP created" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string &new_name) : name(new_name) {
-	std::cout << "🤖🤖 CLAPTRAP " << name << " created" << std::endl;
+	std::cout << "🤖🤖🤖 CLAPTRAP " << name << " created" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &claptrap) {
+	*this = claptrap;
+}
+	
+ClapTrap& ClapTrap::operator=(const ClapTrap &claptrap) {
+	name = claptrap.name;
+	hit_points = claptrap.hit_points;
+	max_hit_points = claptrap.max_hit_points;
+	energy_points = claptrap.energy_points;
+	max_energy_points = claptrap.max_energy_points;
+	level = claptrap.level;
+	melee_attack_damage = claptrap.melee_attack_damage;
+	ranged_attack_damage = claptrap.ranged_attack_damage;
+	armor_damage_reduction = claptrap.armor_damage_reduction;
+	return (*this);
 }
 
 void ClapTrap::rangedAttack(std::string const &target) const {
@@ -57,5 +74,5 @@ void ClapTrap::beRepaired(unsigned amount) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "💔💔 CLAPTRAP " << name << " destroyed" << std::endl;
+	std::cout << "💔💔💔 CLAPTRAP " << name << " destroyed" << std::endl;
 }

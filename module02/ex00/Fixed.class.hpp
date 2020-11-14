@@ -9,10 +9,12 @@ private:
 public:	
 	Fixed();
 	Fixed(const Fixed &new_fixed);
-	Fixed& operator=(const Fixed &fixed);
-	int getRawBits(void) const;
-	void setRawBits(int const raw);
 	~Fixed();
+
+	Fixed&	operator=(const Fixed &fixed);
+	
+	int		getRawBits(void) const;
+	void	setRawBits(int const raw);
 };
 
 #endif

@@ -19,8 +19,13 @@ private:
 public:
 	ScavTrap();
 	ScavTrap(std::string const &new_name);
-	void challengeNewcomer(std::string const &target);
+	ScavTrap(const ScavTrap &scavtrap);
 	~ScavTrap();
+
+	ScavTrap& operator=(const ScavTrap &scavtrap);
+
+	void initScavTrap();
+	void challengeNewcomer(std::string const &target);
 };
 
 #endif

@@ -3,13 +3,13 @@
 #include "FragTrap.class.hpp"
 
 FragTrap::FragTrap() {
-	std::cout << "🤖 Nameless FR4G-TP created" << std::endl;
+	std::cout << "🤖🤖 Nameless FR4G-TP created" << std::endl;
 	name = "noname";
 	initFragTrap();
 }
 
 FragTrap::FragTrap(const std::string &new_name) {
-	std::cout << "🤖 FR4G-TP " << new_name << " created" << std::endl;
+	std::cout << "🤖🤖 FR4G-TP " << new_name << " created" << std::endl;
 	name = new_name;
 	initFragTrap();
 }
@@ -52,5 +52,5 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "💔 FR4G-TP " << name << " destroyed" << std::endl;
+	std::cout << "💔💔 FR4G-TP " << name << " destroyed" << std::endl;
 }

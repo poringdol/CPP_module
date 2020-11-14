@@ -9,7 +9,7 @@ CC = clang++
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
 # FLAGS = -g
-NAME = scavtrap
+NAME = claptrap
 SRC = main.cpp \
 	  FragTrap.class.cpp \
 	  ScavTrap.class.cpp
