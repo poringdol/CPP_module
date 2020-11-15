@@ -14,7 +14,7 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap) {
 	*this = claptrap;
 }
 	
-ClapTrap& ClapTrap::operator=(const ClapTrap &claptrap) {
+ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
 	name = claptrap.name;
 	hit_points = claptrap.hit_points;
 	max_hit_points = claptrap.max_hit_points;

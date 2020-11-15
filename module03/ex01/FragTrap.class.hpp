@@ -1,5 +1,5 @@
-#ifndef FragTrap_H
-#define FragTrap_H
+#ifndef FRAGTRAP_H
+#define FRAGTRAP_H
 
 #include <string>
 
@@ -30,7 +30,7 @@ public:
 	FragTrap(const FragTrap &fragtrap);
 	~FragTrap();
 
-	FragTrap& operator=(const FragTrap &fragtrap);
+	FragTrap &operator=(const FragTrap &fragtrap);
 	
 	void rangedAttack(std::string const &target) const;
 	void meleeAttack(std::string const &target) const;

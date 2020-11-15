@@ -21,7 +21,7 @@ Fixed::Fixed(const Fixed &new_fixed) {
 	fixed_point_value = new_fixed.fixed_point_value;
 }
 
-Fixed& Fixed::operator=(const Fixed &fixed) {
+Fixed &Fixed::operator=(const Fixed &fixed) {
 	std::cout << "Assignation operator called" << std::endl;
 	fixed_point_value = fixed.fixed_point_value;
 	return (*this);
@@ -47,7 +47,7 @@ Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
 
-std::ostream& operator<<(std::ostream &stream, const Fixed &fixed) {
+std::ostream &operator<<(std::ostream &stream, const Fixed &fixed) {
 	stream << fixed.toFloat();
 	return (stream);
 }

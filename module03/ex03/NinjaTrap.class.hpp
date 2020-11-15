@@ -13,7 +13,7 @@ public:
 	NinjaTrap(const NinjaTrap &ninjatrap);
 	~NinjaTrap();
 
-	NinjaTrap& operator=(const NinjaTrap &ninjatrap);
+	NinjaTrap &operator=(const NinjaTrap &ninjatrap);
 	
 	void initNinjaTrap();
 	void ninjaShoebox(FragTrap &claptrap, std::string const &target);

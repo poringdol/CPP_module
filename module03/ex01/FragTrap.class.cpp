@@ -15,7 +15,7 @@ FragTrap::FragTrap(const FragTrap &fragtrap) {
 	*this = fragtrap;
 }
 	
-FragTrap& FragTrap::operator=(const FragTrap &fragtrap) {
+FragTrap &FragTrap::operator=(const FragTrap &fragtrap) {
 	name = fragtrap.name;
 	hit_points = fragtrap.hit_points;
 	max_hit_points = fragtrap.max_hit_points;

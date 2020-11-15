@@ -30,7 +30,7 @@ public:
 	ScavTrap(const ScavTrap &scavtrap);
 	~ScavTrap();
 
-	ScavTrap& operator=(const ScavTrap &scavtrap);
+	ScavTrap &operator=(const ScavTrap &scavtrap);
 
 	void rangedAttack(std::string const &target) const;
 	void meleeAttack(std::string const &target) const;

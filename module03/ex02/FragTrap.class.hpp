@@ -1,5 +1,5 @@
-#ifndef FragTrap_H
-#define FragTrap_H
+#ifndef FRAGTRAP_H
+#define FRAGTRAP_H
 
 #include <string>
 #include "ClapTrap.class.hpp"
@@ -22,7 +22,7 @@ public:
 	FragTrap(const FragTrap &fragtrap);
 	~FragTrap();
 
-	FragTrap& operator=(const FragTrap &fragtrap);
+	FragTrap &operator=(const FragTrap &fragtrap);
 
 	void initFragTrap();
 	void vaulthunter_dot_exe(std::string const &target);

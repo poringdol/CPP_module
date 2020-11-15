@@ -15,7 +15,7 @@ ScavTrap::ScavTrap(const ScavTrap &scavtrap) {
 	*this = scavtrap;
 }
 	
-ScavTrap& ScavTrap::operator=(const ScavTrap &scavtrap) {
+ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap) {
 	name = scavtrap.name;
 	hit_points = scavtrap.hit_points;
 	max_hit_points = scavtrap.max_hit_points;

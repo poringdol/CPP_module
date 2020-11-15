@@ -22,7 +22,7 @@ public:
 	ClapTrap(const ClapTrap &claptrap);
 	~ClapTrap();
 
-	ClapTrap& operator=(const ClapTrap &claptrap);
+	ClapTrap &operator=(const ClapTrap &claptrap);
 	
 	void rangedAttack(std::string const &target) const;
 	void meleeAttack(std::string const &target) const;

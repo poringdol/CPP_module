@@ -11,7 +11,7 @@ public:
 	void clear(void);
 	void input(void);
 	void print(void) const;
-	void print_width_10(const std::string& str) const;
+	void print_width_10(const std::string &str) const;
 
 	int not_empty;
 	std::string	first_name;

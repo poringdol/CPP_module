@@ -68,7 +68,7 @@ void Contact::print(void) const {
 	std::cout << std::setw(17) << "Darkest secret: " << darkest_secret << std::endl;
 }
 
-void Contact::print_width_10(const std::string& str) const {
+void Contact::print_width_10(const std::string &str) const {
 	if (str.length() < 11) {
 		std::cout << std::setw(10) << str;
 	} else {

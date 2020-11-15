@@ -20,7 +20,7 @@ SuperTrap::SuperTrap(const SuperTrap &supertrap) {
 	*this = supertrap;
 }
 	
-SuperTrap& SuperTrap::operator=(const SuperTrap &supertrap) {
+SuperTrap &SuperTrap::operator=(const SuperTrap &supertrap) {
 	name = supertrap.name;
 	hit_points = supertrap.hit_points;
 	max_hit_points = supertrap.max_hit_points;

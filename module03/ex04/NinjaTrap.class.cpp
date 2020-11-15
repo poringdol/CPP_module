@@ -21,7 +21,7 @@ NinjaTrap::NinjaTrap(const NinjaTrap &ninjatrap) {
 	*this = ninjatrap;
 }
 	
-NinjaTrap& NinjaTrap::operator=(const NinjaTrap &ninjatrap) {
+NinjaTrap &NinjaTrap::operator=(const NinjaTrap &ninjatrap) {
 	name = ninjatrap.name;
 	hit_points = ninjatrap.hit_points;
 	max_hit_points = ninjatrap.max_hit_points;

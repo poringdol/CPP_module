@@ -10,7 +10,7 @@ Fixed::Fixed(const Fixed &new_fixed) {
 	fixed_point_value = new_fixed.fixed_point_value;
 }
 
-Fixed& Fixed::operator=(const Fixed &fixed) {
+Fixed &Fixed::operator=(const Fixed &fixed) {
 	std::cout << "Assignation operator called" << std::endl;
 	fixed_point_value = fixed.fixed_point_value;
 	return (*this);
