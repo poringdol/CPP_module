@@ -3,9 +3,11 @@
 
 #include <string>
 #include <iostream>
+#include "Victim.class.hpp"
 
-class Sorcerer {
+class Sorcerer: public Victim {
 private:
+	Sorcerer();
 	std::string name;
 	std::string title;
 
@@ -19,6 +21,7 @@ public:
 	void				introduce() const;
 	const std::string	&getName() const;
 	const std::string	&getTitle() const;
+	void				polymorph(Victim const &victim) const;
 };
 
 std::ostream &operator<<(std::ostream &stream, const Sorcerer &sorc);

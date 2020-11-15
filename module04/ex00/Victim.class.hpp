@@ -5,7 +5,8 @@
 #include <iostream>
 
 class Victim {
-private:
+protected:
+	Victim();
 	std::string name;
 
 public:
@@ -17,6 +18,7 @@ public:
 
 	void				introduce() const;
 	const std::string	&getName() const;
+	virtual void		getPolymorphed() const;
 };
 
 std::ostream &operator<<(std::ostream &stream, const Victim &victim);
