@@ -38,7 +38,10 @@ void ScavTrap::setMaxEnergyPoints(int i) {maxEnergyPoints = i;}
 void ScavTrap::setLevel(int i) {level = i;}
 void ScavTrap::setMeleeAttackDamage(int i) {meleeAttackDamage = i;}
 void ScavTrap::setRangedAttackDamage(int i) {rangedAttackDamage = i;}
-void ScavTrap::setarmorDamageReduction(int i) {armorDamageReduction = i;}
+void ScavTrap::setArmorDamageReduction(int i) {armorDamageReduction = i;}
+void ScavTrap::setMeeleAttackMessage() {meleeAttackMessage = ": Meat confetti! SC4V-TP ";}
+void ScavTrap::setRangedAttackMessage() {rangeAttackMessage = ": Ha ha ha! Suck it! SC4V-TP ";}
+void ScavTrap::setRangeNoHitPointskMessage() {noHitPointsMessage = ": Why do I even feel pain?! SC4V-TP ";}
 
 void ScavTrap::initScavTrap() {
 	setHitPoints();
@@ -48,7 +51,10 @@ void ScavTrap::initScavTrap() {
 	setLevel();
 	setMeleeAttackDamage();
 	setRangedAttackDamage();
-	setarmorDamageReduction();
+	setArmorDamageReduction();
+	setMeeleAttackMessage();
+	setRangedAttackMessage();
+	setRangeNoHitPointskMessage();
 }
 
 void ScavTrap::challengeNewcomer(std::string const &target) {

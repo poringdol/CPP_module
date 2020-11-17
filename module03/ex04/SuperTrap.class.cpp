@@ -41,15 +41,9 @@ void SuperTrap::initSuperTrap() {
 	FragTrap::setLevel();
 	NinjaTrap::setMeleeAttackDamage();
 	FragTrap::setRangedAttackDamage();
-	FragTrap::setarmorDamageReduction();
-}
-
-void SuperTrap::rangedAttack(std::string const &target) const {
-	FragTrap::rangedAttack(target);
-}
-
-void SuperTrap::meleeAttack(std::string const &target) const {
-	NinjaTrap::meleeAttack(target);
+	FragTrap::setArmorDamageReduction();
+	FragTrap::setRangedAttackMessage();
+	NinjaTrap::setMeeleAttackMessage();
 }
 
 SuperTrap::~SuperTrap() {

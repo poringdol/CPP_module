@@ -32,7 +32,7 @@ void Victim::introduce() const {
 }
 
 void Victim::getPolymorphed() const {
-	std::cout << name << " has been turned into a cute little sheep!" << std::endl;
+	std::cout << name << " has been turned into a PONY little sheep!" << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &stream, const Victim &victim) {

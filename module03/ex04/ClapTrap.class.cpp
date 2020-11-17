@@ -29,10 +29,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
 
 void ClapTrap::rangedAttack(std::string const &target) const {
 	if (!hitPoints) {
-		std::cout << "⛔ " << name <<  noHitPoints << "CLAPTRAP " << name <<
+		std::cout << "⛔ " << name <<  noHitPointsMessage << name <<
 					 " needs to be repaired so that it can attack" << std::endl;
 	} else {
-		std::cout << "🏹 " << name << rangeAttackMessage << "CLAPTRAP " << name <<
+		std::cout << "🏹 " << name << rangeAttackMessage << name <<
 					 " attacks " <<  target << " at range, causing " <<
 					 rangedAttackDamage << " points of damage!" << std::endl;
 	}
@@ -40,10 +40,10 @@ void ClapTrap::rangedAttack(std::string const &target) const {
 
 void ClapTrap::meleeAttack(std::string const &target) const {
 	if (!hitPoints) {
-		std::cout << "⛔ " << name <<  noHitPoints << "CLAPTRAP " << name <<
+		std::cout << "⛔ " << name <<  noHitPointsMessage << name <<
 					 " needs to be repaired so that it can attack" << std::endl;
 	} else {
-		std::cout << "🗡  " << name << rangeAttackMessage << "CLAPTRAP " << name <<
+		std::cout << "🗡  " << name << meleeAttackMessage << name <<
 						" attacks " << target << " in melee, causing " <<
 						meleeAttackDamage << " points of damage!" << std::endl;
 	}

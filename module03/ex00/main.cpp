@@ -4,7 +4,7 @@
 
 int main() {
 	srand(time(0));
-	FragTrap claptrap("\033[0;32mCUTE\033[0;0m");
+	FragTrap claptrap("\033[0;32mPONY\033[0;0m");
 	std::string frag("\033[0;31mFRAG\033[0;0m");
 
 	claptrap.rangedAttack(frag);

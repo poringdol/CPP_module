@@ -16,6 +16,10 @@ protected:
 	void setMeleeAttackDamage(int i = 60);
 	void setRangedAttackDamage(int i = 5);
 	void setarmorDamageReduction(int i = 0);
+	void setMeeleAttackMessage();
+	void setRangedAttackMessage();
+	void setRangeNoHitPointskMessage();
+	void initFragTrap();
 	void initNinjaTrap();
 public:
 	NinjaTrap();

@@ -13,7 +13,10 @@ private:
 	void setLevel(int i = 1);
 	void setMeleeAttackDamage(int i = 60);
 	void setRangedAttackDamage(int i = 5);
-	void setarmorDamageReduction(int i = 0);
+	void setArmorDamageReduction(int i = 0);
+	void setMeeleAttackMessage();
+	void setRangedAttackMessage();
+	void setRangeNoHitPointskMessage();
 	void initScavTrap();
 	std::string	randomAttack[9] = {"I did a challenge? I did a challenge!",
 									"Pain school is now in session. Ready for the PUNCHline?!",

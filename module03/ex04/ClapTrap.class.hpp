@@ -14,9 +14,9 @@ protected:
 	unsigned	meleeAttackDamage = 0;
 	unsigned	rangedAttackDamage = 0;
 	unsigned	armorDamageReduction = 0;
-	std::string	meleeAttackMessage = ": Melee damage ";
-	std::string	rangeAttackMessage = ": Range damage ";
-	std::string	noHitPoints = ": No hit point ";
+	std::string	meleeAttackMessage = ": Melee damage. CLAPTRAP ";
+	std::string	rangeAttackMessage = ": Range damage. CLAPTRAP ";
+	std::string	noHitPointsMessage = ": No hit points. CLAPTRAP ";
 	std::string	randomAttack[9];
 
 public:

@@ -19,8 +19,6 @@ public:
 
 	SuperTrap &operator=(const SuperTrap &supertrap);
 	
-	void rangedAttack(std::string const &target) const;
-	void meleeAttack(std::string const &target) const;
 	void challengeNewcomer(std::string const &target);
 };
 

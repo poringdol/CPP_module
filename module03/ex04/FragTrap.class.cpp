@@ -38,13 +38,10 @@ void FragTrap::setMaxEnergyPoints(int i) {maxEnergyPoints = i;}
 void FragTrap::setLevel(int i) {level = i;}
 void FragTrap::setMeleeAttackDamage(int i) {meleeAttackDamage = i;}
 void FragTrap::setRangedAttackDamage(int i) {rangedAttackDamage = i;}
-void FragTrap::setarmorDamageReduction(int i) {armorDamageReduction = i;}
-void FragTrap::setMeeleAttackMessage (std::string) {
-	meleeAttackMessage = "";
-}
-void FragTrap::setRangeAttackMessage (std::string) {
-	rangeAttackMessage = "";
-}
+void FragTrap::setArmorDamageReduction(int i) {armorDamageReduction = i;}
+void FragTrap::setMeeleAttackMessage() {meleeAttackMessage = ": Meet professor punch! FR4G-TP ";}
+void FragTrap::setRangedAttackMessage() {rangeAttackMessage = ": Crack shot! FR4G-TP ";}
+void FragTrap::setRangeNoHitPointskMessage() {noHitPointsMessage = ": Why do I feel radioactive!? FR4G-TP ";}
 
 void FragTrap::initFragTrap() {
 	setHitPoints();
@@ -54,7 +51,10 @@ void FragTrap::initFragTrap() {
 	setLevel();
 	setMeleeAttackDamage();
 	setRangedAttackDamage();
-	setarmorDamageReduction();
+	setArmorDamageReduction();
+	setMeeleAttackMessage();
+	setRangedAttackMessage();
+	setRangeNoHitPointskMessage();
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target) {

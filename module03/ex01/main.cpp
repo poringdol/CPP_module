@@ -5,7 +5,7 @@
 
 int main() {
 	srand(time(0));
-	FragTrap fragtrap("\033[0;32mCUTE\033[0;0m");
+	FragTrap fragtrap("\033[0;32mPONY\033[0;0m");
 	ScavTrap scavtrap("\033[0;34mPRETTY\033[0;0m");
 	std::string frag("\033[0;31mFRAG\033[0;0m");
 
