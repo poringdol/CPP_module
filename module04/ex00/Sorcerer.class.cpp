@@ -1,6 +1,6 @@
 #include "Sorcerer.class.hpp"
 
-Sorcerer::Sorcerer() : name(""), title("") {}
+Sorcerer::Sorcerer() : name("Noname"), title("NoTitle") {}
 
 Sorcerer::Sorcerer(std::string n_name, std::string n_title) : name(n_name), title(n_title) {
 	std::cout << getName() << ", " << getTitle() << ", is born!" << std::endl;
@@ -13,18 +13,18 @@ Sorcerer::Sorcerer(const Sorcerer &sorc) {
 
 Sorcerer::~Sorcerer() {
 	std::cout << getName() << ", " << getTitle() <<
-				 " is dead. Consequences will never be the same!" << std::endl;
+				 ", is dead. Consequences will never be the same!" << std::endl;
 }
 
 Sorcerer &Sorcerer::operator=(const Sorcerer &sorc) {
 	setName(sorc.getName());
-	setTitle(sorc.getName());
+	setTitle(sorc.getTitle());
 	return (*this);
 }
 
 void Sorcerer::setName(std::string n_name) {name = n_name;}
 
-void Sorcerer::setTitle(std::string n_title) {name = n_title;}
+void Sorcerer::setTitle(std::string n_title) {title = n_title;}
 
 const std::string &Sorcerer::getName() const {return (name);}
 

@@ -21,7 +21,7 @@ public:
 	Peon &operator=(const Peon &);
 
 	std::string	getName() const;
-	void		getPolymorphed() const;
+	void		getPolymorphed() const override;
 };
 
 std::ostream &operator<<(std::ostream &stream, const Peon &peon);

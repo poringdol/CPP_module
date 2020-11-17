@@ -2,21 +2,16 @@
 #include <iostream>
 #include "Sorcerer.class.hpp"
 #include "Victim.class.hpp"
+#include "Peon.class.hpp"
 
-int main() {
-	// Sorcerer sorc[5];
-	// Sorcerer sorc()
-	// Sorcerer sorc("Name");
+int main(){
+	Sorcerer robert("Robert", "the Magnificent");
 
-	Sorcerer sorc1("Gandalf", "The Gray");
-	std::cout << sorc1;
-	sorc1.introduce();
+	Victim jim("Jimmy");
+	Peon joe("Joe");
 
-	Sorcerer sorc2(sorc1);
-	
-	Victim vict1("Sheep");
-	std::cout << vict1;
-	vict1.introduce();
+	std::cout << robert << jim << joe;
 
-	Victim vict2(vict1);
+	robert.polymorph(jim);
+	robert.polymorph(joe);
 }

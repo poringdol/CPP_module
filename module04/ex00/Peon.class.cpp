@@ -1,8 +1,9 @@
 #include "Peon.class.hpp"
 
-Peon::Peon() : name("") {}
+Peon::Peon() : name("Noname") {}
 
 Peon::Peon(std::string n_name) : Victim(n_name) {
+	name = n_name;
 	std::cout << "Zog zog." << std::endl;
 }
 
@@ -12,7 +13,7 @@ Peon::Peon(const Peon &peon) {
 }
 
 Peon::~Peon() {
-	std::cout << "Bleuark... " << std::endl;
+	std::cout << "Bleuark..." << std::endl;
 }
 
 void Peon::setName(std::string n_name) {name = n_name;}
@@ -29,6 +30,6 @@ void Peon::getPolymorphed() const {
 }
 
 std::ostream &operator<<(std::ostream &stream, const Peon &peon) {
-	stream << "I'm " << peon.getName() << ", and I like otters!" << std::endl;
+	stream << "I'm " << peon.getName() << " and I like otters!" << std::endl;
 	return (stream);
 }
