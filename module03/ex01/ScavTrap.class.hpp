@@ -6,15 +6,15 @@
 class ScavTrap {
 private:
 	std::string	name;
-	unsigned	hit_points = 100;
- 	unsigned	max_hit_points = 100;
-	unsigned	energy_points = 50;
-	unsigned	max_energy_points = 50;
+	unsigned	hitPoints = 100;
+ 	unsigned	maxHitPoints = 100;
+	unsigned	energyPoints = 50;
+	unsigned	maxEnergyPoints = 50;
 	unsigned	level = 1;
-	unsigned	melee_attack_damage = 20;
-	unsigned	ranged_attack_damage = 15;
-	unsigned	armor_damage_reduction = 3;
-	std::string	random_attack[9] = {"I did a challenge? I did a challenge!",
+	unsigned	meleeAttackDamage = 20;
+	unsigned	rangedAttackDamage = 15;
+	unsigned	armorDamageReduction = 3;
+	std::string	randomAttack[9] = {"I did a challenge? I did a challenge!",
 									"Pain school is now in session. Ready for the PUNCHline?!",
 									"Gloves are comin' off!",
 									"Now I will dominate!",

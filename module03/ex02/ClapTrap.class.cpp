@@ -11,49 +11,49 @@ ClapTrap::ClapTrap(const std::string &new_name) : name(new_name) {
 }
 
 void ClapTrap::rangedAttack(std::string const &target) const {
-	if (!hit_points) {
+	if (!hitPoints) {
 		std::cout << "⛔ " << name << ": Why do I even feel pain?! " << name <<
 					 " needs to be repaired so that it can attack" << std::endl;
 	} else {
 		std::cout << "🏹 " << name << ": Ha ha ha! Suck it! CLAPTRAP " << name <<
 					 " attacks " <<  target << " at range, causing " <<
-					 ranged_attack_damage << " points of damage!" << std::endl;
+					 rangedAttackDamage << " points of damage!" << std::endl;
 	}
 }
 
 void ClapTrap::meleeAttack(std::string const &target) const {
-	if (!hit_points) {
+	if (!hitPoints) {
 		std::cout << "⛔ " << name << ": Why do I even feel pain?! CLAPTRAP " << name <<
 					 " needs to be repaired so that it can attack" << std::endl;
 	} else {
 		std::cout << "🗡  " << name << ": Meat confetti! CLAPTRAP " << name <<
 						" attacks " << target << " in melee, causing " <<
-						melee_attack_damage << " points of damage!" << std::endl;
+						meleeAttackDamage << " points of damage!" << std::endl;
 	}
 }
 
 void ClapTrap::takeDamage(unsigned amount) {
-	if (amount <= armor_damage_reduction) {
+	if (amount <= armorDamageReduction) {
 		std::cout << "🛡  " << name << ": Enterrrrr the CHAMPION! " << name <<
 					 " reflected all damage!" << std::endl;
 	} else {
-		amount = amount - armor_damage_reduction < hit_points ?
-				(amount - armor_damage_reduction) : hit_points;
+		amount = amount - armorDamageReduction < hitPoints ?
+				(amount - armorDamageReduction) : hitPoints;
 		std::cout << "😵 " << name << ": Ow hohoho, that hurts! Yipes! " << name <<
 					 " taken " << amount << " points of damage!" << std::endl;
-		hit_points -= amount;
+		hitPoints -= amount;
 	}
 }
 
 void ClapTrap::beRepaired(unsigned amount) {
-	unsigned energy = (amount + energy_points < max_energy_points) ?	
-					  amount : (max_energy_points - energy_points);
-	amount = (amount + hit_points < max_hit_points) ?
-			 amount : (max_hit_points - hit_points);
+	unsigned energy = (amount + energyPoints < maxEnergyPoints) ?	
+					  amount : (maxEnergyPoints - energyPoints);
+	amount = (amount + hitPoints < maxHitPoints) ?
+			 amount : (maxHitPoints - hitPoints);
 	std::cout << "🔧 " << name << ": Healsies! " << name << " repaired " <<
 				amount << " hit points and " << energy << " energy points!" << std::endl;
-	hit_points += amount;
-	energy_points += energy;
+	hitPoints += amount;
+	energyPoints += energy;
 }
 
 ClapTrap::~ClapTrap() {

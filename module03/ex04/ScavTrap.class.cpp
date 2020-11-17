@@ -20,25 +20,25 @@ ScavTrap::ScavTrap(const ScavTrap &scavtrap) {
 	
 ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap) {
 	name = scavtrap.name;
-	hit_points = scavtrap.hit_points;
-	max_hit_points = scavtrap.max_hit_points;
-	energy_points = scavtrap.energy_points;
-	max_energy_points = scavtrap.max_energy_points;
+	hitPoints = scavtrap.hitPoints;
+	maxHitPoints = scavtrap.maxHitPoints;
+	energyPoints = scavtrap.energyPoints;
+	maxEnergyPoints = scavtrap.maxEnergyPoints;
 	level = scavtrap.level;
-	melee_attack_damage = scavtrap.melee_attack_damage;
-	ranged_attack_damage = scavtrap.ranged_attack_damage;
-	armor_damage_reduction = scavtrap.armor_damage_reduction;
+	meleeAttackDamage = scavtrap.meleeAttackDamage;
+	rangedAttackDamage = scavtrap.rangedAttackDamage;
+	armorDamageReduction = scavtrap.armorDamageReduction;
 	return (*this);
 }
 
-void ScavTrap::setHitPoints(int i) {hit_points = i;}
-void ScavTrap::setMaxHitPoints(int i) {max_hit_points = i;}
-void ScavTrap::setEnergyPoints(int i) {energy_points = i;}
-void ScavTrap::setMaxEnergyPoints(int i) {max_energy_points = i;}
+void ScavTrap::setHitPoints(int i) {hitPoints = i;}
+void ScavTrap::setMaxHitPoints(int i) {maxHitPoints = i;}
+void ScavTrap::setEnergyPoints(int i) {energyPoints = i;}
+void ScavTrap::setMaxEnergyPoints(int i) {maxEnergyPoints = i;}
 void ScavTrap::setLevel(int i) {level = i;}
-void ScavTrap::setMeleeAttackDamage(int i) {melee_attack_damage = i;}
-void ScavTrap::setRangedAttackDamage(int i) {ranged_attack_damage = i;}
-void ScavTrap::setArmorDamageReduction(int i) {armor_damage_reduction = i;}
+void ScavTrap::setMeleeAttackDamage(int i) {meleeAttackDamage = i;}
+void ScavTrap::setRangedAttackDamage(int i) {rangedAttackDamage = i;}
+void ScavTrap::setarmorDamageReduction(int i) {armorDamageReduction = i;}
 
 void ScavTrap::initScavTrap() {
 	setHitPoints();
@@ -48,13 +48,13 @@ void ScavTrap::initScavTrap() {
 	setLevel();
 	setMeleeAttackDamage();
 	setRangedAttackDamage();
-	setArmorDamageReduction();
+	setarmorDamageReduction();
 }
 
 void ScavTrap::challengeNewcomer(std::string const &target) {
-	if (energy_points >= 25) {
-		std::cout << "💥 " << name << ": " << target << "! " << random_attack[rand() % 9] << std::endl;
-		energy_points -= 25;
+	if (energyPoints >= 25) {
+		std::cout << "💥 " << name << ": " << target << "! " << randomAttack[rand() % 9] << std::endl;
+		energyPoints -= 25;
 	} else {
 		std::cout << "⛔ " << name << ": Where'd all my bullets go?" << std::endl;
 	}

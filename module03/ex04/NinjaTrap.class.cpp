@@ -23,25 +23,25 @@ NinjaTrap::NinjaTrap(const NinjaTrap &ninjatrap) {
 	
 NinjaTrap &NinjaTrap::operator=(const NinjaTrap &ninjatrap) {
 	name = ninjatrap.name;
-	hit_points = ninjatrap.hit_points;
-	max_hit_points = ninjatrap.max_hit_points;
-	energy_points = ninjatrap.energy_points;
-	max_energy_points = ninjatrap.max_energy_points;
+	hitPoints = ninjatrap.hitPoints;
+	maxHitPoints = ninjatrap.maxHitPoints;
+	energyPoints = ninjatrap.energyPoints;
+	maxEnergyPoints = ninjatrap.maxEnergyPoints;
 	level = ninjatrap.level;
-	melee_attack_damage = ninjatrap.melee_attack_damage;
-	ranged_attack_damage = ninjatrap.ranged_attack_damage;
-	armor_damage_reduction = ninjatrap.armor_damage_reduction;
+	meleeAttackDamage = ninjatrap.meleeAttackDamage;
+	rangedAttackDamage = ninjatrap.rangedAttackDamage;
+	armorDamageReduction = ninjatrap.armorDamageReduction;
 	return (*this);
 }
 
-void NinjaTrap::setHitPoints(int i) {hit_points = i;}
-void NinjaTrap::setMaxHitPoints(int i) {max_hit_points = i;}
-void NinjaTrap::setEnergyPoints(int i) {energy_points = i;}
-void NinjaTrap::setMaxEnergyPoints(int i) {max_energy_points = i;}
+void NinjaTrap::setHitPoints(int i) {hitPoints = i;}
+void NinjaTrap::setMaxHitPoints(int i) {maxHitPoints = i;}
+void NinjaTrap::setEnergyPoints(int i) {energyPoints = i;}
+void NinjaTrap::setMaxEnergyPoints(int i) {maxEnergyPoints = i;}
 void NinjaTrap::setLevel(int i) {level = i;}
-void NinjaTrap::setMeleeAttackDamage(int i) {melee_attack_damage = i;}
-void NinjaTrap::setRangedAttackDamage(int i) {ranged_attack_damage = i;}
-void NinjaTrap::setArmorDamageReduction(int i) {armor_damage_reduction = i;}
+void NinjaTrap::setMeleeAttackDamage(int i) {meleeAttackDamage = i;}
+void NinjaTrap::setRangedAttackDamage(int i) {rangedAttackDamage = i;}
+void NinjaTrap::setarmorDamageReduction(int i) {armorDamageReduction = i;}
 
 void NinjaTrap::initNinjaTrap() {
 	setHitPoints();
@@ -51,7 +51,7 @@ void NinjaTrap::initNinjaTrap() {
 	setLevel();
 	setMeleeAttackDamage();
 	setRangedAttackDamage();
-	setArmorDamageReduction();
+	setarmorDamageReduction();
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap &claptrap, std::string const &target) {

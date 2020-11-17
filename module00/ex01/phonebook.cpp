@@ -19,13 +19,22 @@ int	main(void) {
 			phonebook.input();
 		} else if (input == "SEARCH") {
 			phonebook.list();
-			std::cout << "Enter contact index: ";
-			int	index;
-			std::cin >> index;
-			std::cin.ignore();
-			if (!std::cin || index < 0 || index >= BOOK_SIZE) {
-				std::cout << "Wrong index. Shoud be >= 0 && < 8" << std::endl;
-				continue;
+			int	index = -1;
+			while (1) {
+				std::cout << "Enter contact index: ";
+				std::cin >> index;
+				if (std::cin.eof()) {
+					std::cout << std::endl;
+					exit(0);
+				}
+				if (!std::cin || index < 0 || index >= BOOK_SIZE) {
+					std::cout << "Wrong input. Index shoud be integer >= 0 && < "<< BOOK_SIZE << std::endl;
+					std::cin.clear();
+					while (std::cin.get() != '\n');
+				} else {
+					std::cin.ignore();
+					break;
+				}
 			}
 			phonebook.print(index);
 		} else {

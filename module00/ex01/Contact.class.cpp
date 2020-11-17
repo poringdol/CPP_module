@@ -7,6 +7,22 @@ Contact::Contact(void) {
 	Contact::clear();
 }
 
+int Contact::get_not_empty() const {
+	return (not_empty);
+}
+
+std::string	Contact::get_first_name() const {
+	return (first_name);
+}
+
+std::string Contact::get_last_name() const {
+	return (last_name);
+}
+
+std::string Contact::get_nickname() const {
+	return (nickname);
+}
+
 void Contact::clear(void) {
 	not_empty = 0;
 	first_name.clear();

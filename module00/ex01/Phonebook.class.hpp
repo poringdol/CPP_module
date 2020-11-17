@@ -7,6 +7,8 @@
 #define BOOK_SIZE 8
 
 class Phonebook {
+private:
+	Contact	contact[BOOK_SIZE];
 
 public:
 	Phonebook(void);
@@ -15,8 +17,6 @@ public:
 	void input(void);
 	void list(void) const;
 	void print(int i) const;
-
-	Contact	contact[BOOK_SIZE];
 
 	~Phonebook(void);
 };

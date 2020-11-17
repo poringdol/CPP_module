@@ -6,7 +6,7 @@
 
 class ScavTrap : public ClapTrap{
 private:
-	std::string	random_attack[9] = {"I did a challenge? I did a challenge!",
+	std::string	randomAttack[9] = {"I did a challenge? I did a challenge!",
 									"Pain school is now in session. Ready for the PUNCHline?!",
 									"Gloves are comin' off!",
 									"Now I will dominate!",

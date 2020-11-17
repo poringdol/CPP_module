@@ -13,9 +13,11 @@ protected:
 	void setLevel(int i = 1);
 	void setMeleeAttackDamage(int i = 30);
 	void setRangedAttackDamage(int i = 20);
-	void setArmorDamageReduction(int i = 5);
+	void setarmorDamageReduction(int i = 5);
+	void setMeeleAttackMessage(std::string);
+	void setRangeAttackMessage(std::string);
 	void initFragTrap();
-	std::string	random_attack[9] = {"Come over here, I'll gnaw your legs off!",
+	std::string	randomAttack[9] = {"Come over here, I'll gnaw your legs off!",
 									"I fart rainbows! Bask in my aura of death!",
 									"Lightening! Kukachow! Zippity doodah!",
 									"Meet professor punch!",

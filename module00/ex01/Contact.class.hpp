@@ -4,15 +4,7 @@
 #include <string>
 
 class Contact {
-
-public:
-	Contact(void);
-
-	void clear(void);
-	void input(void);
-	void print(void) const;
-	void print_width_10(const std::string &str) const;
-
+private:
 	int not_empty;
 	std::string	first_name;
 	std::string	last_name;
@@ -26,7 +18,18 @@ public:
 	std::string	underwear_color;
 	std::string	darkest_secret;
 
+public:
+	Contact(void);
 	~Contact(void);
+
+	int			get_not_empty() const;
+	std::string get_first_name() const;
+	std::string get_last_name() const;
+	std::string get_nickname() const;
+	void clear(void);
+	void input(void);
+	void print(void) const;
+	void print_width_10(const std::string &str) const;
 };
 
 #endif

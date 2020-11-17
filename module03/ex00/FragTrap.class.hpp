@@ -6,15 +6,15 @@
 class FragTrap {
 private:
 	std::string	name;
-	unsigned	hit_points = 100;
- 	unsigned	max_hit_points = 100;
-	unsigned	energy_points = 100;
-	unsigned	max_energy_points = 100;
+	unsigned	hitPoints = 100;
+ 	unsigned	maxHitPoints = 100;
+	unsigned	energyPoints = 100;
+	unsigned	maxEnergyPoints = 100;
 	unsigned	level = 1;
-	unsigned	melee_attack_damage = 30;
-	unsigned	ranged_attack_damage = 20;
-	unsigned	armor_damage_reduction = 5;
-	std::string	random_attack[10] = {"Come over here, I'll gnaw your legs off!",
+	unsigned	meleeAttackDamage = 30;
+	unsigned	rangedAttackDamage = 20;
+	unsigned	armorDamageReduction = 5;
+	std::string	randomAttack[10] = {"Come over here, I'll gnaw your legs off!",
 									"I fart rainbows! Bask in my aura of death!",
 									"Lightening! Kukachow! Zippity doodah!",
 									"Burn, baby, burn!",

@@ -6,15 +6,18 @@
 class ClapTrap {
 protected:
 	std::string	name;
-	unsigned	hit_points = 0;
- 	unsigned	max_hit_points = 0;
-	unsigned	energy_points = 0;
-	unsigned	max_energy_points = 0;
+	unsigned	hitPoints = 0;
+ 	unsigned	maxHitPoints = 0;
+	unsigned	energyPoints = 0;
+	unsigned	maxEnergyPoints = 0;
 	unsigned	level = 0;
-	unsigned	melee_attack_damage = 0;
-	unsigned	ranged_attack_damage = 0;
-	unsigned	armor_damage_reduction = 0;
-	std::string	random_attack[9];
+	unsigned	meleeAttackDamage = 0;
+	unsigned	rangedAttackDamage = 0;
+	unsigned	armorDamageReduction = 0;
+	std::string	meleeAttackMessage = ": Melee damage ";
+	std::string	rangeAttackMessage = ": Range damage ";
+	std::string	noHitPoints = ": No hit point ";
+	std::string	randomAttack[9];
 
 public:
 	ClapTrap();

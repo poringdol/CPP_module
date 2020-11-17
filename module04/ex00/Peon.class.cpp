@@ -15,13 +15,17 @@ Peon::~Peon() {
 	std::cout << "Bleuark... " << std::endl;
 }
 
+void Peon::setName(std::string n_name) {name = n_name;}
+
+std::string	Peon::getName() const {return (name);}
+
 Peon &Peon::operator=(const Peon &peon) {
-	name = peon.name;
+	setName(peon.getName());
 	return (*this);
 }
 
 void Peon::getPolymorphed() const {
-	std::cout << name << " has been turned into a pink pony!" << std::cout;
+	std::cout << getName() << " has been turned into a pink pony!" << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &stream, const Peon &peon) {

@@ -15,7 +15,7 @@ protected:
 	void setLevel(int i = 1);
 	void setMeleeAttackDamage(int i = 60);
 	void setRangedAttackDamage(int i = 5);
-	void setArmorDamageReduction(int i = 0);
+	void setarmorDamageReduction(int i = 0);
 	void initNinjaTrap();
 public:
 	NinjaTrap();

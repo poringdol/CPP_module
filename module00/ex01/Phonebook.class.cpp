@@ -16,22 +16,22 @@ void Phonebook::clear(void) {
 void Phonebook::input(void) {
 	int i;
 
-	for (i = 0; contact[i].not_empty && i < BOOK_SIZE; i++)
+	for (i = 0; contact[i].get_not_empty() && i < BOOK_SIZE; i++)
 		;
 	if (i < BOOK_SIZE)
 		contact[i].input();
 	else
-		std::cerr << "Phonebook::input: Can't input. Phonebook full" << std::endl;
+		std::cerr << "Phonebook::input: Phonebook is full" << std::endl;
 }
 
 void Phonebook::list(void) const {
-	for (int i = 0; i < BOOK_SIZE && contact[i].not_empty; i++) {
+	for (int i = 0; i < BOOK_SIZE && contact[i].get_not_empty(); i++) {
 		std::cout << std::setw(10) << i << "|";
-		contact[i].print_width_10(contact[i].first_name);
+		contact[i].print_width_10(contact[i].get_first_name());
 		std::cout << "|";
-		contact[i].print_width_10(contact[i].last_name);
+		contact[i].print_width_10(contact[i].get_last_name());
 		std::cout << "|";
-		contact[i].print_width_10(contact[i].nickname);
+		contact[i].print_width_10(contact[i].get_nickname());
 		std::cout << std::endl;
 	}
 }

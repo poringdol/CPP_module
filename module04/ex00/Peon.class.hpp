@@ -7,17 +7,21 @@
 
 class Peon : public Victim {
 private:
-	Peon();
 	std::string name;
+	
+	Peon();
+
+	void setName(std::string);
 
 public:
-	Peon(std::string n_name);
-	Peon(const Peon &Peon);
+	Peon(std::string);
+	Peon(const Peon &);
 	~Peon();
 
-	Peon &operator=(const Peon &peon);
+	Peon &operator=(const Peon &);
 
-	void getPolymorphed() const override;
+	std::string	getName() const;
+	void		getPolymorphed() const;
 };
 
 std::ostream &operator<<(std::ostream &stream, const Peon &peon);
