@@ -1,13 +1,17 @@
 #include <string>
 #include <iostream>
+#include <cstdlib>
 #include "ClapTrap.class.hpp"
 
-ClapTrap::ClapTrap() : name("noname") {
-	std::cout << "🤖🤖 Nameless CLAPTRAP created" << std::endl;
+ClapTrap::ClapTrap() {
+	std::cout << "🤖 Nameless CLAPTRAP created" << std::endl;
+	initClapTrap();
 }
 
-ClapTrap::ClapTrap(const std::string &new_name) : name(new_name) {
-	std::cout << "🤖🤖 CLAPTRAP " << name << " created" << std::endl;
+ClapTrap::ClapTrap(const std::string &new_name) {
+	std::cout << "🤖 CLAPTRAP " << name << " created" << std::endl;
+	initClapTrap();
+	setName(new_name);
 }
 
 ClapTrap::ClapTrap(const ClapTrap &claptrap) {
@@ -29,10 +33,10 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
 
 void ClapTrap::rangedAttack(std::string const &target) const {
 	if (!hitPoints) {
-		std::cout << "⛔ " << name << ": Why do I even feel pain?! CLAPTRAP" << name <<
+		std::cout << "⛔ " << name <<  noHitPointsMessage << name <<
 					 " needs to be repaired so that it can attack" << std::endl;
 	} else {
-		std::cout << "🏹 " << name << ": Ha ha ha! Suck it! CLAPTRAP " << name <<
+		std::cout << "🏹 " << name << rangeAttackMessage << name <<
 					 " attacks " <<  target << " at range, causing " <<
 					 rangedAttackDamage << " points of damage!" << std::endl;
 	}
@@ -40,10 +44,10 @@ void ClapTrap::rangedAttack(std::string const &target) const {
 
 void ClapTrap::meleeAttack(std::string const &target) const {
 	if (!hitPoints) {
-		std::cout << "⛔ " << name << ": Why do I even feel pain?! CLAPTRAP " << name <<
+		std::cout << "⛔ " << name <<  noHitPointsMessage << name <<
 					 " needs to be repaired so that it can attack" << std::endl;
 	} else {
-		std::cout << "🗡  " << name << ": Meat confetti! CLAPTRAP " << name <<
+		std::cout << "🗡  " << name << meleeAttackMessage << name <<
 						" attacks " << target << " in melee, causing " <<
 						meleeAttackDamage << " points of damage!" << std::endl;
 	}
@@ -74,5 +78,32 @@ void ClapTrap::beRepaired(unsigned amount) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "💔💔 CLAPTRAP " << name << " destroyed" << std::endl;
+	std::cout << "💔 CLAPTRAP " << name << " destroyed" << std::endl;
+}
+
+void ClapTrap::setName(std::string str) {name = str;}
+void ClapTrap::setHitPoints(unsigned u) {hitPoints = u;}
+void ClapTrap::setMaxHitPoints(unsigned u) {maxHitPoints = u;}
+void ClapTrap::setEnergyPoints(unsigned u) {energyPoints = u;}
+void ClapTrap::setMaxEnergyPoints(unsigned u) {maxEnergyPoints = u;}
+void ClapTrap::setLevel(unsigned u) {level = u;}
+void ClapTrap::setMeleeAttackDamage(unsigned u) {meleeAttackDamage = u;}
+void ClapTrap::setRangedAttackDamage(unsigned u) {rangedAttackDamage = u;}
+void ClapTrap::setArmorDamageReduction(unsigned u) {armorDamageReduction = u;}
+void ClapTrap::setMeleeAttackMessage(std::string str) {meleeAttackMessage = str;}
+void ClapTrap::setRangeAttackMessage(std::string str) {rangeAttackMessage = str;}
+void ClapTrap::setNoHitPointsMessage(std::string str) {noHitPointsMessage = str;}
+void ClapTrap::initClapTrap() {
+	setName();
+	setHitPoints();
+	setMaxHitPoints();
+	setEnergyPoints();
+	setMaxEnergyPoints();
+	setLevel();
+	setMeleeAttackDamage();
+	setRangedAttackDamage();
+	setArmorDamageReduction();
+	setMeleeAttackMessage();
+	setRangeAttackMessage();
+	setNoHitPointsMessage();
 }

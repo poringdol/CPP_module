@@ -9,10 +9,23 @@ CC = clang++ -std=c++98
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
 
-NAME = fixed
+NAME = polymorph
 SRC = main.cpp \
-	  Fixed.class.cpp
+	  AWeapon.hpp.cpp \
+	  PlasmaRifle.cpp \
+	  PowerFist.cpp \
+	  Enemy.cpp \
+	  SuperMutant.cpp \
+	  RadScorpion.cpp \
+	  Character.cpp
 OBJ = $(SRC:.cpp=.o)
+HEADER = AWeapon.hpp.hpp \
+	  PlasmaRifle.hpp \
+	  PowerFist.hpp \
+	  Enemy.hpp \
+	  SuperMutant.hpp \
+	  RadScorpion.hpp \
+	  Character.hpp
 
 all: $(NAME)
 
@@ -20,7 +33,7 @@ $(NAME): $(OBJ)
 	@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
 	@echo "$(GREEN)  Executable $(PURPLE)$(NAME) $(GREEN)created  $(B&W)"
 	
-%.o: %.cpp
+%.o: %.cpp $(HEADER)
 	@$(CC) -c $< -o $@ $(FLAGS)
 	@echo "$(GREEN)  Object file $(PURPLE)$@ $(GREEN)created  $(B&W)"
 

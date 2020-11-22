@@ -2,12 +2,15 @@
 #include <iostream>
 #include "ClapTrap.class.hpp"
 
-ClapTrap::ClapTrap() : name("noname") {
-	std::cout << "🤖🤖🤖 Nameless CLAPTRAP created" << std::endl;
+ClapTrap::ClapTrap() {
+	std::cout << "🤖 Nameless CLAPTRAP created" << std::endl;
+	initClapTrap();
 }
 
-ClapTrap::ClapTrap(const std::string &new_name) : name(new_name) {
-	std::cout << "🤖🤖🤖 CLAPTRAP " << name << " created" << std::endl;
+ClapTrap::ClapTrap(const std::string &new_name) {
+	std::cout << "🤖 CLAPTRAP " << name << " created" << std::endl;
+	initClapTrap();
+	setName(new_name);
 }
 
 ClapTrap::ClapTrap(const ClapTrap &claptrap) {
@@ -24,6 +27,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap) {
 	meleeAttackDamage = claptrap.meleeAttackDamage;
 	rangedAttackDamage = claptrap.rangedAttackDamage;
 	armorDamageReduction = claptrap.armorDamageReduction;
+	meleeAttackMessage = claptrap.meleeAttackMessage;
+	rangeAttackMessage = claptrap.rangeAttackMessage;
+	noHitPointsMessage = claptrap.noHitPointsMessage;
 	return (*this);
 }
 
@@ -74,5 +80,32 @@ void ClapTrap::beRepaired(unsigned amount) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "💔💔💔 CLAPTRAP " << name << " destroyed" << std::endl;
+	std::cout << "💔 CLAPTRAP " << name << " destroyed" << std::endl;
+}
+
+void ClapTrap::setName(std::string str) {name = str;}
+void ClapTrap::setHitPoints(unsigned u) {hitPoints = u;}
+void ClapTrap::setMaxHitPoints(unsigned u) {maxHitPoints = u;}
+void ClapTrap::setEnergyPoints(unsigned u) {energyPoints = u;}
+void ClapTrap::setMaxEnergyPoints(unsigned u) {maxEnergyPoints = u;}
+void ClapTrap::setLevel(unsigned u) {level = u;}
+void ClapTrap::setMeleeAttackDamage(unsigned u) {meleeAttackDamage = u;}
+void ClapTrap::setRangedAttackDamage(unsigned u) {rangedAttackDamage = u;}
+void ClapTrap::setArmorDamageReduction(unsigned u) {armorDamageReduction = u;}
+void ClapTrap::setMeleeAttackMessage(std::string str) {meleeAttackMessage = str;}
+void ClapTrap::setRangeAttackMessage(std::string str) {rangeAttackMessage = str;}
+void ClapTrap::setNoHitPointsMessage(std::string str) {noHitPointsMessage = str;}
+void ClapTrap::initClapTrap() {
+	setName();
+	setHitPoints();
+	setMaxHitPoints();
+	setEnergyPoints();
+	setMaxEnergyPoints();
+	setLevel();
+	setMeleeAttackDamage();
+	setRangedAttackDamage();
+	setArmorDamageReduction();
+	setMeleeAttackMessage();
+	setRangeAttackMessage();
+	setNoHitPointsMessage();
 }

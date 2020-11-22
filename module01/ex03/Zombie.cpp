@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <cstdlib>
 #include "Zombie.hpp"
 
 Zombie::Zombie() {
@@ -20,8 +21,9 @@ void Zombie::announce() const {
 void Zombie::randomChump() {
 	std::string names[10] = {"Chester", "Dolores", "Keith", "Kurt", "Freddie",
 							   "Victor", "Egor", "Amy", "Michael", "Elvis"};
+	std::string types[5] = {"Rock", "Pop", "Jazz", "Rap", "RusRock"};
 	name = names[rand() % 10];
-	type = "legend";
+	type = types[rand() % 5];
 }
 
 std::string Zombie::GetName() const {

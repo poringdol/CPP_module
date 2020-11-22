@@ -6,7 +6,7 @@
 #include "NinjaTrap.class.hpp"
 
 NinjaTrap::NinjaTrap() {
-	std::cout << "🤖 Nameless NINJA created" << std::endl;
+	std::cout << "🤖🤖 Nameless NINJA created" << std::endl;
 	name = "noname";
 	hitPoints = 60;
  	maxHitPoints = 60;
@@ -19,7 +19,7 @@ NinjaTrap::NinjaTrap() {
 }
 
 NinjaTrap::NinjaTrap(const std::string &new_name) {
-	std::cout << "🤖 NINJA " << new_name << " created" << std::endl;
+	std::cout << "🤖🤖 NINJA " << new_name << " created" << std::endl;
 	name = new_name;
 	initNinjaTrap();
 }
@@ -69,7 +69,7 @@ void NinjaTrap::ninjaShoebox(NinjaTrap &claptrap, std::string const &target) {
 }
 
 NinjaTrap::~NinjaTrap() {
-	std::cout << "💔 NINJA " << name << " destroyed" << std::endl;
+	std::cout << "💔💔 NINJA " << name << " destroyed" << std::endl;
 }
 
 // void NinjaTrap::ninjaShoebox(ninjatrap &claptrap, std::string const &target) {

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "Zombie.hpp"
 
 Zombie::Zombie() {
@@ -13,7 +14,7 @@ Zombie::Zombie(const std::string &z_name, const std::string &z_type) {
 }
 
 void Zombie::announce() const {
-	std::cout << name << " (" << type << ")" << " Braiiiiiiinnnssss..." << std::endl;
+	std::cout << GetName() << " (" << GetType() << ")" << " Braiiiiiiinnnssss..." << std::endl;
 }
 
 std::string Zombie::GetName() const {

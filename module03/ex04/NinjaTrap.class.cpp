@@ -44,7 +44,7 @@ void NinjaTrap::setRangedAttackDamage(int i) {rangedAttackDamage = i;}
 void NinjaTrap::setarmorDamageReduction(int i) {armorDamageReduction = i;}
 void NinjaTrap::setMeeleAttackMessage() {meleeAttackMessage = ": Meet professor punch! NINJA ";}
 void NinjaTrap::setRangedAttackMessage() {rangeAttackMessage = ": Crack shot! NINJA ";}
-void NinjaTrap::setRangeNoHitPointskMessage() {noHitPointsMessage = ": Why do I feel radioactive!? NINJA ";}
+void NinjaTrap::setRangeNoHitPointsMessage() {noHitPointsMessage = ": Why do I feel radioactive!? NINJA ";}
 
 void NinjaTrap::initNinjaTrap() {
 	setHitPoints();
@@ -57,7 +57,7 @@ void NinjaTrap::initNinjaTrap() {
 	setarmorDamageReduction();
 	setMeeleAttackMessage();
 	setRangedAttackMessage();
-	setRangeNoHitPointskMessage();
+	setRangeNoHitPointsMessage();
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap &claptrap, std::string const &target) {

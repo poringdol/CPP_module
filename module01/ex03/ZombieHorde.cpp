@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdexcept>
-#include <unistd.h>
+#include <cstdlib>
 #include "Zombie.hpp"
 #include "ZombieHorde.hpp"
 

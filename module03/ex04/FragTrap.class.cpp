@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <cstdlib>
 #include "FragTrap.class.hpp"
 
 FragTrap::FragTrap() {
@@ -41,7 +42,21 @@ void FragTrap::setRangedAttackDamage(int i) {rangedAttackDamage = i;}
 void FragTrap::setArmorDamageReduction(int i) {armorDamageReduction = i;}
 void FragTrap::setMeeleAttackMessage() {meleeAttackMessage = ": Meet professor punch! FR4G-TP ";}
 void FragTrap::setRangedAttackMessage() {rangeAttackMessage = ": Crack shot! FR4G-TP ";}
-void FragTrap::setRangeNoHitPointskMessage() {noHitPointsMessage = ": Why do I feel radioactive!? FR4G-TP ";}
+void FragTrap::setRangeNoHitPointsMessage() {noHitPointsMessage = ": Why do I feel radioactive!? FR4G-TP ";}
+void FragTrap::setRandomAttack() {
+	std::string attack[9]= {"Come over here, I'll gnaw your legs off!",
+							"I fart rainbows! Bask in my aura of death!",
+							"Lightening! Kukachow! Zippity doodah!",
+							"Meet professor punch!",
+							"Take two bullets, then call me in the morning.",
+							"I brought you a present: EXPLOSIONS!",
+							"Dance battle! Or, you know... regular battle.",
+							"Don't bother with plastic surgery - there's NO fixing that!",
+							"Did someone feel something? I am NOT sorry!"};
+	for (int i = 0; i < 9; i++) {
+		randomAttack[i] = attack[i];
+	}
+}
 
 void FragTrap::initFragTrap() {
 	setHitPoints();
@@ -54,7 +69,8 @@ void FragTrap::initFragTrap() {
 	setArmorDamageReduction();
 	setMeeleAttackMessage();
 	setRangedAttackMessage();
-	setRangeNoHitPointskMessage();
+	setRangeNoHitPointsMessage();
+	setRandomAttack();
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target) {

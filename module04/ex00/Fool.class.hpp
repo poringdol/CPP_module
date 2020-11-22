@@ -1,29 +1,29 @@
-#ifndef PEON_H
-#define PEON_H
+#ifndef FOOL_H
+#define FOOL_H
 
 #include <string>
 #include <iostream>
 #include "Victim.class.hpp"
 
-class Peon : public Victim {
+class Fool : public Victim {
 private:
 	std::string name;
 	
-	Peon();
+	Fool();
 
 	void setName(std::string);
 
 public:
-	Peon(std::string);
-	Peon(const Peon &);
-	~Peon();
+	Fool(std::string);
+	Fool(const Fool &);
+	~Fool();
 
-	Peon &operator=(const Peon &);
+	Fool &operator=(const Fool &);
 
 	std::string	getName() const;
 	void		getPolymorphed() const /*override*/;
 };
 
-std::ostream &operator<<(std::ostream &stream, const Peon &peon);
+std::ostream &operator<<(std::ostream &stream, const Fool &fool);
 
 #endif

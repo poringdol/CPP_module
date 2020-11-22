@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #include <unistd.h>
+#include <cstdlib>
 #include "Zombie.hpp"
 #include "ZombieEvent.hpp"
 

@@ -8,9 +8,9 @@ class Pony {
 public:
 	Pony(void);
 
-	std::string	name;
-	std::string	color;
-	int			age;
+	std::string	name = "New pony";
+	std::string	color = "";
+	int			age = 0;
 
 	~Pony(void);
 };

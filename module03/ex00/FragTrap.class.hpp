@@ -6,24 +6,15 @@
 class FragTrap {
 private:
 	std::string	name;
-	unsigned	hitPoints = 100;
- 	unsigned	maxHitPoints = 100;
-	unsigned	energyPoints = 100;
-	unsigned	maxEnergyPoints = 100;
-	unsigned	level = 1;
-	unsigned	meleeAttackDamage = 30;
-	unsigned	rangedAttackDamage = 20;
-	unsigned	armorDamageReduction = 5;
-	std::string	randomAttack[10] = {"Come over here, I'll gnaw your legs off!",
-									"I fart rainbows! Bask in my aura of death!",
-									"Lightening! Kukachow! Zippity doodah!",
-									"Burn, baby, burn!",
-									"Meet professor punch!",
-									"Take two bullets, then call me in the morning.",
-									"I brought you a present: EXPLOSIONS!",
-									"Dance battle! Or, you know... regular battle.",
-									"Don't bother with plastic surgery - there's NO fixing that!",
-									"Did someone feel something? I am NOT sorry!"};
+	unsigned	hitPoints;
+ 	unsigned	maxHitPoints;
+	unsigned	energyPoints;
+	unsigned	maxEnergyPoints;
+	unsigned	level;
+	unsigned	meleeAttackDamage;
+	unsigned	rangedAttackDamage;
+	unsigned	armorDamageReduction;
+	std::string	randomAttack[10];
 
 public:
 	FragTrap();
@@ -32,7 +23,8 @@ public:
 	~FragTrap();
 	
 	FragTrap &operator=(const FragTrap &fragtrap);
-	
+
+	void initFragTrap();
 	void rangedAttack(std::string const &target) const;
 	void meleeAttack(std::string const &target) const;
 	void takeDamage(unsigned amount);

@@ -5,13 +5,13 @@
 #include "FragTrap.class.hpp"
 
 SuperTrap::SuperTrap() : ClapTrap(), NinjaTrap(), FragTrap() {
-	std::cout << "🤖 Nameless SUPER TRAP created" << std::endl;
+	std::cout << "🤖🤖🤖 Nameless SUPER TRAP created" << std::endl;
 	name = "noname";
 	initSuperTrap();
 }
 
 SuperTrap::SuperTrap(const std::string &new_name) : ClapTrap(new_name), NinjaTrap(new_name), FragTrap(new_name) {
-	std::cout << "🤖 SUPER TRAP " << new_name << " created" << std::endl;
+	std::cout << "🤖🤖🤖 SUPER TRAP " << new_name << " created" << std::endl;
 	name = new_name;
 	initSuperTrap();
 }
@@ -47,6 +47,6 @@ void SuperTrap::initSuperTrap() {
 }
 
 SuperTrap::~SuperTrap() {
-	std::cout << "💔 SUPER TRAP " << name << " destroyed" << std::endl;
-	// std::cout << "💔 SUPER TRAP" << " destroyed" << std::endl;
+	std::cout << "💔💔💔 SUPER TRAP " << name << " destroyed" << std::endl;
+	// std::cout << "💔💔💔 SUPER TRAP" << " destroyed" << std::endl;
 }

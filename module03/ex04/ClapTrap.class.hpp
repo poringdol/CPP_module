@@ -6,18 +6,31 @@
 class ClapTrap {
 protected:
 	std::string	name;
-	unsigned	hitPoints = 0;
- 	unsigned	maxHitPoints = 0;
-	unsigned	energyPoints = 0;
-	unsigned	maxEnergyPoints = 0;
-	unsigned	level = 0;
-	unsigned	meleeAttackDamage = 0;
-	unsigned	rangedAttackDamage = 0;
-	unsigned	armorDamageReduction = 0;
-	std::string	meleeAttackMessage = ": Melee damage. CLAPTRAP ";
-	std::string	rangeAttackMessage = ": Range damage. CLAPTRAP ";
-	std::string	noHitPointsMessage = ": No hit points. CLAPTRAP ";
-	std::string	randomAttack[9];
+	unsigned	hitPoints;
+ 	unsigned	maxHitPoints;
+	unsigned	energyPoints;
+	unsigned	maxEnergyPoints;
+	unsigned	level;
+	unsigned	meleeAttackDamage;
+	unsigned	rangedAttackDamage;
+	unsigned	armorDamageReduction;
+	std::string	meleeAttackMessage;
+	std::string	rangeAttackMessage;
+	std::string	noHitPointsMessage;
+
+	void setName(std::string = "noname");
+	void setHitPoints(unsigned u = 0);
+ 	void setMaxHitPoints(unsigned u = 0);
+	void setEnergyPoints(unsigned u = 0);
+	void setMaxEnergyPoints(unsigned u = 0);
+	void setLevel(unsigned u = 0);
+	void setMeleeAttackDamage(unsigned u = 0);
+	void setRangedAttackDamage(unsigned u = 0);
+	void setArmorDamageReduction(unsigned u = 0);
+	void setMeleeAttackMessage(std::string = "Melee damage. CLAPTRAP ");
+	void setRangeAttackMessage(std::string = ": Range damage. CLAPTRAP ");
+	void setNoHitPointsMessage(std::string = ": No hit points. CLAPTRAP ");
+	void initClapTrap();
 
 public:
 	ClapTrap();

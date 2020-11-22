@@ -18,7 +18,7 @@ protected:
 	void setarmorDamageReduction(int i = 0);
 	void setMeeleAttackMessage();
 	void setRangedAttackMessage();
-	void setRangeNoHitPointskMessage();
+	void setRangeNoHitPointsMessage();
 	void initFragTrap();
 	void initNinjaTrap();
 public:

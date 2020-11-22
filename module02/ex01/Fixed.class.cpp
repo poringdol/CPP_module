@@ -13,7 +13,7 @@ Fixed::Fixed(const int new_value) {
 
 Fixed::Fixed(const float new_value) {
 	std::cout << "Float constructor called" << std::endl;
-	fixed_point_value = (new_value * (1 << bits));				//   'i << 8'  equal  'i * (1 << 8)'  equal 'i * pow(2, 8)'
+	fixed_point_value = roundf(new_value * (1 << bits));				//   'i << 8'  equal  'i * (1 << 8)'  equal 'i * pow(2, 8)'
 }
 
 Fixed::Fixed(const Fixed &new_fixed) {

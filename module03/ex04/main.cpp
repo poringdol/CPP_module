@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <cstdlib>
 #include "ClapTrap.class.hpp"
 #include "FragTrap.class.hpp"
 #include "ScavTrap.class.hpp"

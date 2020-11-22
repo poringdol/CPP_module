@@ -5,7 +5,7 @@ RED  = \033[0;31m
 GREEN = \033[0;32m
 PURPLE = \033[0;35m
 
-CC = clang++
+CC = clang++ -std=c++98
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
 
@@ -13,11 +13,15 @@ NAME = polymorph
 SRC = main.cpp \
 	  Sorcerer.class.cpp \
 	  Victim.class.cpp \
-	  Peon.class.cpp
+	  Peon.class.cpp \
+	  Dupe.class.cpp \
+	  Fool.class.cpp
 OBJ = $(SRC:.cpp=.o)
 HEADER = Sorcerer.class.hpp \
 	 	 Victim.class.hpp \
-		 Peon.class.hpp
+		 Peon.class.hpp \
+		 Dupe.class.hpp \
+		 Fool.class.hpp
 
 all: $(NAME)
 

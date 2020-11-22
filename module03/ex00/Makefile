@@ -5,10 +5,9 @@ RED  = \033[0;31m
 GREEN = \033[0;32m
 PURPLE = \033[0;35m
 
-CC = clang++
+CC = clang++ -std=c++98
 RM = rm -rf
-# FLAGS = -Wall -Werror -Wextra -g
-FLAGS = -g
+FLAGS = -Wall -Werror -Wextra -g
 NAME = claptrap
 SRC = main.cpp \
 	  FragTrap.class.cpp
