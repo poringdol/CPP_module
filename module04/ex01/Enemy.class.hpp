@@ -9,10 +9,10 @@ protected:
 	std::string Type;
 
 	Enemy();
-
-public:
 	Enemy(int hp, std::string const &type);
 	Enemy(const Enemy &enemy);
+
+public:
 	~Enemy();
 	
 	Enemy &operator=(const Enemy &enemy);

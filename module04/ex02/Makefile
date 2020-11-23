@@ -5,19 +5,16 @@ RED  = \033[0;31m
 GREEN = \033[0;32m
 PURPLE = \033[0;35m
 
-CC = clang++ -std=c++98
+CC = clang++
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
 
 NAME = war
 SRC = main.cpp \
-	  AWeapon.class.cpp \
-	  PlasmaRifle.class.cpp \
-	  PowerFist.class.cpp \
-	  Enemy.class.cpp \
-	  SuperMutant.class.cpp \
-	  RadScorpion.class.cpp \
-	  Character.class.cpp
+	  Squad.class.cpp \
+	  TacticalMarine.class.cpp \
+	  AssaultTerminator.class.cpp
+
 OBJS = $(SRC:.cpp=.o)
 OBJDIR = ./objects/
 OBJ = $(addprefix $(OBJDIR), $(OBJS))
