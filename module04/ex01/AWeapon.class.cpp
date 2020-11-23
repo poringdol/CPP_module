@@ -1,7 +1,7 @@
 #include <string>
 #include "AWeapon.class.hpp"
 
-AWeapon::AWeapon() : Name("noname"), APCost(0), Damage(0) {}
+AWeapon::AWeapon() : Name("empty hands"), APCost(0), Damage(0) {}
 
 AWeapon::AWeapon(std::string const &name, int apcost, int damage) :
 				Name(name), APCost(apcost), Damage(damage) {}

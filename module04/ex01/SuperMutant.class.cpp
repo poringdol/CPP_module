@@ -26,11 +26,13 @@ void		SuperMutant::setType(std::string type) {Type = type;}
 
 void		SuperMutant::takeDamage(int damage) {
 	damage -= 3;
-	if (damage > 0) {
+	if (HP && damage > 0) {
 		int taken_damage = (HP > damage) ? damage : HP;
 		HP -= taken_damage;
-		std::cout << getType() << " taken " << taken_damage << " damage" << std::endl;
-		std::cout << "Remaining " << HP << " HP" << std::endl;
+		// std::cout << getType() << " taken " << taken_damage << " damage" << std::endl;
+		// std::cout << "Remaining " << HP << " HP" << std::endl;
+		if (!HP)
+			SuperMutant::~SuperMutant();
 	}
 }
 
