@@ -9,23 +9,25 @@ CC = clang++ -std=c++98
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
 
-NAME = polymorph
+NAME = war
 SRC = main.cpp \
-	  AWeapon.hpp.cpp \
-	  PlasmaRifle.cpp \
-	  PowerFist.cpp \
-	  Enemy.cpp \
-	  SuperMutant.cpp \
-	  RadScorpion.cpp \
-	  Character.cpp
-OBJ = $(SRC:.cpp=.o)
-HEADER = AWeapon.hpp.hpp \
-	  PlasmaRifle.hpp \
-	  PowerFist.hpp \
-	  Enemy.hpp \
-	  SuperMutant.hpp \
-	  RadScorpion.hpp \
-	  Character.hpp
+	  AWeapon.class.cpp \
+	  PlasmaRifle.class.cpp \
+	  PowerFist.class.cpp \
+	  Enemy.class.cpp \
+	  SuperMutant.class.cpp \
+	  RadScorpion.class.cpp \
+	  Character.class.cpp
+OBJS = $(SRC:.cpp=.o)
+OBJDIR = ./objects/
+OBJ = $(addprefix $(OBJDIR), $(OBJS))
+HEADER = AWeapon.class.hpp \
+	  PlasmaRifle.class.hpp \
+	  PowerFist.class.hpp \
+	  Enemy.class.hpp \
+	  SuperMutant.class.hpp \
+	  RadScorpion.class.hpp \
+	  Character.class.hpp
 
 all: $(NAME)
 
@@ -33,12 +35,13 @@ $(NAME): $(OBJ)
 	@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
 	@echo "$(GREEN)  Executable $(PURPLE)$(NAME) $(GREEN)created  $(B&W)"
 	
-%.o: %.cpp $(HEADER)
+$(OBJDIR)%.o: %.cpp $(HEADER)
+	@test -d $(OBJDIR) || mkdir $(OBJDIR)
 	@$(CC) -c $< -o $@ $(FLAGS)
 	@echo "$(GREEN)  Object file $(PURPLE)$@ $(GREEN)created  $(B&W)"
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJDIR)
 
 fclean: clean
 	$(RM) $(NAME)
