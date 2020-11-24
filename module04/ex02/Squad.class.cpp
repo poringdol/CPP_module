@@ -1,10 +1,10 @@
 #include <cstdlib>
-#include "ISpaceMarine.class.hpp"
+#include "ISpaceMarine.interface.hpp"
 #include "Squad.class.hpp"
 
 Squad::Squad() : squad(NULL), count(0) {}
 
-Squad::Squad(const Squad &sq) {*this = sq;}
+Squad::Squad(const Squad &sq) : squad(NULL), count(0) {*this = sq;}
 
 Squad::~Squad() {
 	clearSquad(squad, count);
@@ -30,10 +30,8 @@ int Squad::push(ISpaceMarine *sq) {
 	if (!sq || isAlreadyInSquad(sq))
 		return count;
 	ISpaceMarine **tmp = new ISpaceMarine* [count + 1];
-	if (count) {
-		copySquad(tmp, squad, count);
-		clearSquad(squad, count);
-	}
+	copySquad(tmp, squad, count);
+	delete[] squad;
 	squad = tmp;
 	squad[count] = sq;
 	count++;
@@ -42,16 +40,17 @@ int Squad::push(ISpaceMarine *sq) {
 
 void Squad::clearSquad(ISpaceMarine **sq, int n) {
 	if (sq) {
-		while (--n)
-			delete sq[n];
+		for (int i = 0; i < n; i++) {
+			delete sq[i];
+		}
 		delete[] sq;
 		sq = NULL;
 	}
 }
 
 void Squad::copySquad(ISpaceMarine **dst, ISpaceMarine **src, int n) {
-	while (--n) {
-		dst[n] = src[n];
+	for (int i = 0; i < n; i++) {
+		dst[i] = src[i];
 	}
 }
 

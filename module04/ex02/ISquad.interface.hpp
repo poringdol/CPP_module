@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ISpaceMarine.class.hpp"
+#include "ISpaceMarine.interface.hpp"
 
 class ISquad {
 

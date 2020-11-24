@@ -1,7 +1,7 @@
 #pragma once
 
-#include "ISpaceMarine.class.hpp"
-#include "ISquad.class.hpp"
+#include "ISpaceMarine.interface.hpp"
+#include "ISquad.interface.hpp"
 
 class Squad : public ISquad{
 
