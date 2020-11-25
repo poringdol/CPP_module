@@ -6,8 +6,8 @@
 #include "Bureaucrat.class.hpp"
 #include "Form.class.hpp"
 #include "ShrubberyCreationForm.class.hpp"
-// #include "RobotomyRequestForm.class.hpp"
-// #include "PresidentialPardonForm.class.hpp"
+#include "RobotomyRequestForm.class.hpp"
+#include "PresidentialPardonForm.class.hpp"
 
 int main() {
 	using std::cout;
@@ -65,78 +65,78 @@ int main() {
 	}
 	cout << endl;
 
-	// cout << "\n\033[0;35m" << "### RobotomyRequestForm CLASS TEST ###\n\n" << "\033[0;0m";
+	cout << "\n\033[0;35m" << "### RobotomyRequestForm CLASS TEST ###\n\n" << "\033[0;0m";
 
-	// try {
-	// 	cout << "Case: Burecraut with grade 70 can sign and execute the form" << endl;
+	try {
+		cout << "Case: Burecraut with grade 70 can sign and execute the form" << endl;
 		
-	// 	RobotomyRequestForm form("RoboForm");
-	// 	Bureaucrat br("Boris", 70);
+		RobotomyRequestForm form("RoboForm");
+		Bureaucrat br("Boris", 70);
 
-	// 	cout << form << endl;
-	// 	br.signForm(form);
-	// 	cout << form << endl;
-	// 	br.executeForm(form);
-	// } catch (std::exception &ex) {
-	// 	cout << ex.what() << endl;
-	// }
-	// cout << endl;
+		cout << form << endl;
+		br.signForm(form);
+		cout << form << endl;
+		br.executeForm(form);
+	} catch (std::exception &ex) {
+		cout << ex.what() << endl;
+	}
+	cout << endl;
 
-	// try {
-	// 	cout << "Case: Burecraut with grade 40 can sign and execute the form" << endl;
+	try {
+		cout << "Case: Burecraut with grade 40 can sign and execute the form" << endl;
 		
-	// 	RobotomyRequestForm form("RoboForm");
-	// 	Bureaucrat br("Boris", 40);
+		RobotomyRequestForm form("RoboForm");
+		Bureaucrat br("Boris", 40);
 
-	// 	cout << form << endl;
-	// 	br.signForm(form);
-	// 	cout << form << endl;
-	// 	br.executeForm(form);
-	// } catch (std::exception &ex) {
-	// 	cout << ex.what() << endl;
-	// }
-	// cout << endl;
+		cout << form << endl;
+		br.signForm(form);
+		cout << form << endl;
+		br.executeForm(form);
+	} catch (std::exception &ex) {
+		cout << ex.what() << endl;
+	}
+	cout << endl;
 
-	// cout << "\033[0;35m" << "### PresidentialPardonForm CLASS TEST ###\n\n" << "\033[0;0m";
+	cout << "\033[0;35m" << "### PresidentialPardonForm CLASS TEST ###\n\n" << "\033[0;0m";
 
-	// try {
-	// 	cout << "Case: Burecraut with grade 20 can sign and execute the form" << endl;
+	try {
+		cout << "Case: Burecraut with grade 20 can sign and execute the form" << endl;
 		
-	// 	PresidentialPardonForm form("PresPardon");
-	// 	Bureaucrat br("Boris", 20);
+		PresidentialPardonForm form("Marvin");
+		Bureaucrat br("Boris", 20);
 
-	// 	cout << form << endl;
-	// 	br.signForm(form);
-	// 	cout << form << endl;
-	// 	br.executeForm(form);
-	// } catch (std::exception &ex) {
-	// 	cout << ex.what() << endl;
-	// }
-	// cout << endl;
+		cout << form << endl;
+		br.signForm(form);
+		cout << form << endl;
+		br.executeForm(form);
+	} catch (std::exception &ex) {
+		cout << ex.what() << endl;
+	}
+	cout << endl;
 
-	// try {
-	// 	cout << "Case: Try execute usigned form" << endl;
+	try {
+		cout << "Case: Try execute usigned form" << endl;
 		
-	// 	PresidentialPardonForm form("PresPardon");
-	// 	Bureaucrat br("Boris", 5);
+		PresidentialPardonForm form("Marvin");
+		Bureaucrat br("Boris", 5);
 
-	// 	cout << form << endl;
-	// 	br.executeForm(form);
-	// } catch (std::exception &ex) {
-	// 	cout << ex.what() << endl;
-	// }
+		cout << form << endl;
+		br.executeForm(form);
+	} catch (std::exception &ex) {
+		cout << ex.what() << endl;
+	}
 
-	// try {
-	// 	cout << "Case: Burecraut with grade 5 can sign and execute the form" << endl;
+	try {
+		cout << "Case: Burecraut with grade 5 can sign and execute the form" << endl;
 		
-	// 	PresidentialPardonForm form("PresPardon");
-	// 	Bureaucrat br("Boris", 5);
+		PresidentialPardonForm form("Marvin");
+		Bureaucrat br("Boris", 5);
 
-	// 	cout << form << endl;
-	// 	br.signForm(form);
-	// 	cout << form << endl;
-	// 	br.executeForm(form);
-	// } catch (std::exception &ex) {
-	// 	cout << ex.what() << endl;
-	// }
+		cout << form << endl;
+		br.signForm(form);
+		cout << form << endl;
+		br.executeForm(form);
+	} catch (std::exception &ex) {
+		cout << ex.what() << endl;
+	}
 }

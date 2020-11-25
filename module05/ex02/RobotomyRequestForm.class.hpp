@@ -5,7 +5,7 @@
 #include "Form.class.hpp"
 #include "Bureaucrat.class.hpp"
 
-class ShrubberyCreationForm : public Form {
+class RobotomyRequestForm : public Form {
 
 private:
 	static int gts;
@@ -13,13 +13,13 @@ private:
 	static std::string formName;
 	static std::string tree;
 
-	ShrubberyCreationForm();
-	ShrubberyCreationForm& operator=(const ShrubberyCreationForm&);
+	RobotomyRequestForm();
+	RobotomyRequestForm& operator=(const RobotomyRequestForm&);
 
 public:
-	ShrubberyCreationForm(const ShrubberyCreationForm&);
-	ShrubberyCreationForm(const std::string& target);
-	~ShrubberyCreationForm();
+	RobotomyRequestForm(const RobotomyRequestForm&);
+	RobotomyRequestForm(const std::string& target);
+	~RobotomyRequestForm();
 
 	virtual void execute(Bureaucrat const&) const override;
 };

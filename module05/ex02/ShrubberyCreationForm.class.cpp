@@ -6,21 +6,22 @@
 
 using SCF = ShrubberyCreationForm;
 
-
 SCF::ShrubberyCreationForm() : Form() {}
 SCF& SCF::operator=(const ShrubberyCreationForm&) {return *this;}
 
 SCF::ShrubberyCreationForm(const std::string& target)
-			: Form(formName, gts, gte, target) {}
+            : Form(formName, gts, gte, target) {}
 SCF::ShrubberyCreationForm(const ShrubberyCreationForm& sc)
-			: Form(formName, gts, gte, sc.getTarget()) {}
+            : Form(formName, gts, gte, sc.getTarget()) {}
 SCF::~ShrubberyCreationForm() {}
 
 void SCF::execute(Bureaucrat const&br) const {
-	std::ofstream ofile(getTarget() + "_shrubbery", std::ios::out | std::ios::trunc);
-	std::cout << "Bureaucrat " << br.getName() << " executed form "
-			  << getName() << " for " << getTarget() << std::endl;
-	ofile << tree;
+    std::ofstream ofile(getTarget() + "_shrubbery", std::ios::out | std::ios::trunc);
+    std::cout << "Bureaucrat " << br.getName()
+              << " executed successful " << getName()
+              << " for " << getTarget() << std::endl;
+    ofile << tree;
+    ofile.close();
 }
 
 int SCF::gts = 145;

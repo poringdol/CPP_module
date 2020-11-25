@@ -15,7 +15,9 @@ SRC = main.cpp \
 	  Form.class.cpp \
 	  Bureaucrat.class.cpp \
 	  myException.class.cpp \
-	  ShrubberyCreationForm.class.cpp
+	  RobotomyRequestForm.class.cpp \
+	  ShrubberyCreationForm.class.cpp \
+	  PresidentialPardonForm.class.cpp
 
 OBJS = $(SRC:.cpp=.o)
 OBJDIR = ./objects/
@@ -36,7 +38,7 @@ $(OBJDIR)%.o: %.cpp
 	@echo "$(GREEN)  Object file $(PURPLE)$@ $(GREEN)created  $(B&W)"
 
 clean:
-	$(RM) $(OBJDIR)
+	$(RM) $(OBJDIR) *_shrubbery
 
 fclean: clean
 	$(RM) $(NAME)
