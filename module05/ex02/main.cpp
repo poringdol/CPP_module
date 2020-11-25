@@ -68,7 +68,7 @@ int main() {
 	cout << "\n\033[0;35m" << "### RobotomyRequestForm CLASS TEST ###\n\n" << "\033[0;0m";
 
 	try {
-		cout << "Case: Burecraut with grade 70 can sign and execute the form" << endl;
+		cout << "Case: Burecraut with grade 70 can sign and can't execute the form" << endl;
 		
 		RobotomyRequestForm form("RoboForm");
 		Bureaucrat br("Boris", 70);
@@ -100,7 +100,7 @@ int main() {
 	cout << "\033[0;35m" << "### PresidentialPardonForm CLASS TEST ###\n\n" << "\033[0;0m";
 
 	try {
-		cout << "Case: Burecraut with grade 20 can sign and execute the form" << endl;
+		cout << "Case: Burecraut with grade 20 can sign and can't execute the form" << endl;
 		
 		PresidentialPardonForm form("Marvin");
 		Bureaucrat br("Boris", 20);
@@ -115,7 +115,7 @@ int main() {
 	cout << endl;
 
 	try {
-		cout << "Case: Try execute usigned form" << endl;
+		cout << "Case: Try execute unsigned form" << endl;
 		
 		PresidentialPardonForm form("Marvin");
 		Bureaucrat br("Boris", 5);
@@ -125,6 +125,7 @@ int main() {
 	} catch (std::exception &ex) {
 		cout << ex.what() << endl;
 	}
+    cout << endl;
 
 	try {
 		cout << "Case: Burecraut with grade 5 can sign and execute the form" << endl;

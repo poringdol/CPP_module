@@ -3,39 +3,32 @@
 #include <string>
 #include <iostream>
 #include "myException.class.hpp"
-#include "Bureaucrat.class.hpp"
+#include "Form.class.hpp"
 
-class Bureaucrat;
+class Form;
 
-class Form {
+class Bureaucrat {
 
 private:
 	const std::string name;
-	const int gradeToSign;
-	const int gradeToExec;
-	bool isSigned;
-	std::string target;
+	int	grade;
 
-protected:
-	Form();
-	Form(const Form&);
-	Form& operator=(const Form&);
+	Bureaucrat();
+	Bureaucrat& operator=(const Bureaucrat&);
 
 public:
-	Form(const std::string& name, int gts, int gte, const std::string& target);
-	virtual ~Form();
+	Bureaucrat(const std::string& name, int grade);
+	Bureaucrat(const Bureaucrat&);
+	~Bureaucrat();
 
 	std::string	getName() const;
-	int			getGradeToSign() const;
-	int			getGradeToExec() const;
-	bool		getIsSigned() const;
-	std::string	getTarget() const;
-	void		beSigned(const Bureaucrat&);
-	void		beExecuted(const Bureaucrat&) const;
+	int			getGrade() const;
+	void		incGrade();
+	void		decGrade();
+	void		signForm(Form&);
+	void		executeForm(Form const& form);
 
-	virtual void execute(Bureaucrat const&) const = 0;
-
-// Exception classes
+// Exception class
 	class		GradeTooHighException : public myException {
 	private:
 		GradeTooHighException() = default;
@@ -55,7 +48,7 @@ public:
 		GradeTooLowException(const GradeTooLowException&) = default;
 		~GradeTooLowException() = default;
 	};
-// Exception classes
 };
+// Exception class
 
-std::ostream& operator<<(std::ostream &os, const Form& form);
+std::ostream& operator<<(std::ostream &os, const Bureaucrat& br);
