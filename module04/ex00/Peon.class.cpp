@@ -28,8 +28,3 @@ Peon &Peon::operator=(const Peon &peon) {
 void Peon::getPolymorphed() const {
 	std::cout << getName() << " has been turned into a pink pony!" << std::endl;
 }
-
-std::ostream &operator<<(std::ostream &stream, const Peon &peon) {
-	stream << "I'm " << peon.getName() << " and I like otters!" << std::endl;
-	return (stream);
-}

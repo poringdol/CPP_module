@@ -17,10 +17,9 @@ private:
 
 public:
 	Sorcerer(std::string n_name, std::string n_title);
-	Sorcerer(const Sorcerer &sorc);
-	~Sorcerer();
-
+	Sorcerer(const Sorcerer &);
 	Sorcerer &operator=(const Sorcerer &);
+	~Sorcerer();
 
 	const std::string	&getName() const;
 	const std::string	&getTitle() const;

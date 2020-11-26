@@ -6,94 +6,105 @@
 #include "Cure.class.hpp"
 #include "MateriaSource.class.hpp"
 
+using std::cout;
+using std::endl;
+
 void printType(AMateria* tmp) {
 	if (tmp)
-		std::cout << "Type of new materia is " << tmp->getType() << std::endl;
+		cout << "Type of new materia is " << tmp->getType() << endl;
 	else
-		std::cout << "Materia creation failed " << std::endl;
+		cout << "Materia creation failed " << endl;
 
 }
 
 int main() {
 	// создаем 2 персонажа
 	ICharacter* me = new Character("me");
-	std::cout << "Create character with name " << me->getName() << std::endl;
+	cout << "3 - Create character with name " << me->getName() << endl;
 	ICharacter* bob = new Character("bob");
-	std::cout << "Create character with name " << bob->getName() << std::endl << std::endl;
+	cout << "4 - Create character with name " << bob->getName() << endl << endl;
 
 	// создаем материю ice через указатель на базовый класс, а cure через указатель на дочерний класс
 	AMateria *ice = new Ice();
-	std::cout << "Make pointer to base class" << std::endl;
+	cout << "5 - Make pointer to base class" << endl;
 	Cure *cure = new Cure();
-	std::cout << "Make pointer to child class" << std::endl << std::endl;
+	cout << "6 - Make pointer to child class" << endl << endl;
 
 	// создаем MateriaSource через указатель на интерфейс
 	IMateriaSource* src = new MateriaSource();
 	AMateria* tmp;
 	// пробуем создать материю из пустого MateriaSource
-	std::cout << "Try create materia from empty MateriaSource" << std::endl;
+	cout << "7 - Try create materia from empty MateriaSource" << endl;
 	tmp = src->createMateria("ice");
+	cout << "7.1 - ";
 	printType(tmp);
+	cout << endl;
 
 	// добавляем в MateriaSource указатели на ice и cure
 	src->learnMateria(ice);
 	src->learnMateria(cure);
 
 	// создаем и удаляем копию объекта класса Ice через указатель на базовый класс
-	std::cout << "Create ice" << std::endl;
+	cout << "8 - Create ice" << endl;
 	tmp = src->createMateria("ice");
+	cout << "8.1 - ";
 	printType(tmp);
 	delete tmp;
+	cout << endl;
 
 	// создаем и удаляем копию объекта класса Cure через указатель на базовый класс
-	std::cout << "Create cure" << std::endl;
+	cout << "9 - Create cure" << endl;
 	tmp = src->createMateria("cure");
+	cout << "9.1 - ";
 	printType(tmp);
 	delete tmp;
+	cout << endl;
 
 	// пробуем создать материю неизвестного типа
-	std::cout << "Try create unknown materia type" << std::endl;
+	cout << "10 - Try create unknown materia type" << endl;
 	tmp = src->createMateria("hz");
+	cout << "10.1 - ";
 	printType(tmp);
+	cout << endl;
 
 	// экипируем ice и cure
 	me->equip(ice);
 	me->equip(cure);
 
-	std::cout << std::endl << "Use slot 0 with ice" << std::endl;
-	std::cout << "Ice XP before action = " << ice->getXP() << std::endl;
+	cout << "11 - Use slot 0 with ice" << endl;
+	cout << "12 - Ice XP before action = " << ice->getXP() << endl;
 	me->use(0, *bob);
-	std::cout << "Ice XP after action = " << ice->getXP() << std::endl << std::endl;
+	cout << "13 - Ice XP after action = " << ice->getXP() << endl << endl;
 	me->use(0, *bob);
-	std::cout << "Ice XP after action = " << ice->getXP() << std::endl << std::endl;
+	cout << "14 - Ice XP after action = " << ice->getXP() << endl << endl;
 	me->use(0, *bob);
-	std::cout << "Ice XP after action = " << ice->getXP() << std::endl << std::endl;
+	cout << "15 - Ice XP after action = " << ice->getXP() << endl << endl;
 
-	std::cout << "Use slot 1 with cure" << std::endl;
-	std::cout << "Cure XP before action XP = " << cure->getXP() << std::endl;
+	cout << "16 - Use slot 1 with cure" << endl;
+	cout << "17 - Cure XP before action XP = " << cure->getXP() << endl;
 	me->use(1, *bob);
-	std::cout << "Cure XP after action = " << cure->getXP() << std::endl << std::endl;
+	cout << "18 - Cure XP after action = " << cure->getXP() << endl << endl;
 
 	// пробуем использовать пустой слот и слот, которого не существует
-	std::cout << "Use empty slot 2" << std::endl;
+	cout << "19 - Use empty slot 2" << endl;
 	me->use(2, *bob);
-	std::cout << "Try use undefined slot 5" << std::endl << std::endl;
+	cout << "20 - Try use undefined slot 5" << endl << endl;
 	me->use(5, *bob);
 
 	// разэкипируем ice и проверяем, что он не удалился
 	me->unequip(0);
-	std::cout << "Ice XP after unequip action = " << ice->getXP() << std::endl << std::endl;
+	cout << "21 - Ice XP after unequip action = " << ice->getXP() << endl << endl;
 	me->equip(ice);
 
 	// проверка копирования Character
 	ICharacter* copy_me = me;
 	copy_me->use(1, *bob);
-	std::cout << "Cure XP after copy_me action = " << cure->getXP() << std::endl << std::endl;
+	cout << "22 - Cure XP after copy_me action = " << cure->getXP() << endl << endl;
 
 	// проверка присвоения Character
 	ICharacter* assign_me(me);
 	assign_me->use(1, *bob);
-	std::cout << "Cure after assign_me action XP = " << cure->getXP() << std::endl << std::endl;
+	cout << "23 - Cure after assign_me action XP = " << cure->getXP() << endl << endl;
 
 	delete bob;
 	delete me;

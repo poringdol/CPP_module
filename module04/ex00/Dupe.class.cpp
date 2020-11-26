@@ -4,12 +4,12 @@ Dupe::Dupe() : name("Noname") {}
 
 Dupe::Dupe(std::string n_name) : Victim(n_name) {
 	name = n_name;
-	std::cout << "Kwabanga!" << std::endl;
+	std::cout << "Kis kis." << std::endl;
 }
 
 Dupe::Dupe(const Dupe &pupe) {
 	*this = pupe;
-	std::cout << "Hello bro!" << std::endl;
+	std::cout << "Kis kis." << std::endl;
 }
 
 Dupe::~Dupe() {

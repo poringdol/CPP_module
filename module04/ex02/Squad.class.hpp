@@ -12,9 +12,8 @@ private:
 public:
 	Squad();
 	Squad(const Squad &);
-	~Squad();
-
 	Squad *operator=(const Squad &);
+	~Squad();
 
 	virtual int getCount() const override;
 	virtual ISpaceMarine* getUnit(int) const override;

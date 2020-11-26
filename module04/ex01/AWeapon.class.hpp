@@ -12,13 +12,12 @@ protected:
 
 	AWeapon();
 	AWeapon(std::string const &name, int apcost, int damage);
-	AWeapon(const AWeapon &aweapon);
+	AWeapon(const AWeapon &);
+	AWeapon	&operator=(const AWeapon &);
 
 public:
-	~AWeapon();
+	virtual ~AWeapon();
 
-	AWeapon		&operator=(const AWeapon &aweapon);
-	
 	std::string  getName() const;
 	std::string	 getAttackSound() const;
 	int 		 getAPCost() const;

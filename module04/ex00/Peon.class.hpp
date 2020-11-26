@@ -16,14 +16,11 @@ private:
 public:
 	Peon(std::string);
 	Peon(const Peon &);
-	~Peon();
-
 	Peon &operator=(const Peon &);
+	virtual ~Peon() override;
 
 	std::string	getName() const;
-	void		getPolymorphed() const /*override*/;
+	void		getPolymorphed() const override;
 };
-
-std::ostream &operator<<(std::ostream &stream, const Peon &peon);
 
 #endif

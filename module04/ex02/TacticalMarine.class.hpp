@@ -11,9 +11,8 @@ private:
 public:
 	TacticalMarine();
 	TacticalMarine(const TacticalMarine &);
-	~TacticalMarine();
-
 	TacticalMarine &operator=(const TacticalMarine &);
+	~TacticalMarine();
 
 	virtual ISpaceMarine* clone() const override;
 	virtual void battleCry() const override;

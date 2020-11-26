@@ -16,14 +16,11 @@ private:
 public:
 	Fool(std::string);
 	Fool(const Fool &);
-	~Fool();
-
 	Fool &operator=(const Fool &);
+	virtual ~Fool() override;
 
 	std::string	getName() const;
-	void		getPolymorphed() const /*override*/;
+	void		getPolymorphed() const override;
 };
-
-std::ostream &operator<<(std::ostream &stream, const Fool &fool);
 
 #endif

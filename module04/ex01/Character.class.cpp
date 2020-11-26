@@ -2,13 +2,11 @@
 #include <iostream>
 #include "Character.class.hpp"
 
-Character::Character() : Name("no name"), AP(0), Weapon(NULL) {
-	setAP();
-}
+Character::Character()
+        : Name("no name"), AP(MAX_AP), Weapon(NULL) {}
 
-Character::Character(std::string const &name) : Name(name), Weapon(NULL) {
-	setAP();
-}
+Character::Character(std::string const &name)
+        : Name(name), AP(MAX_AP), Weapon(NULL) {}
 
 Character::Character(const Character &character) {*this = character;}
 
@@ -25,11 +23,10 @@ std::string	Character::getName() const {return Name;}
 int			Character::getAP() const {return AP;}
 AWeapon		*Character::getWeapon() const {return Weapon;}
 void		Character::setName(std::string name) {Name = name;}
-void		Character::setAP(int ap) {AP = ap;}
 void		Character::setWeapon(AWeapon *weapon) {Weapon = weapon;}
 
 void 		Character::recoverAP() {
-	AP += (AP + RECOVER_AP > MAX_AP) ? MAX_AP : (AP + RECOVER_AP);
+	AP = (AP + RECOVER_AP > MAX_AP) ? MAX_AP : (AP + RECOVER_AP);
 }
 
 void 		Character::equip(AWeapon *weapon) {setWeapon(weapon);}

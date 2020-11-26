@@ -4,7 +4,7 @@ Fool::Fool() : name("Noname") {}
 
 Fool::Fool(std::string n_name) : Victim(n_name) {
 	name = n_name;
-	std::cout << "Zog zog." << std::endl;
+	std::cout << "Bla bla." << std::endl;
 }
 
 Fool::Fool(const Fool &fool) {

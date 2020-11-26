@@ -10,12 +10,11 @@ protected:
 
 	Enemy();
 	Enemy(int hp, std::string const &type);
-	Enemy(const Enemy &enemy);
+	Enemy(const Enemy &);
+	Enemy &operator=(const Enemy &);
 
 public:
-	~Enemy();
-	
-	Enemy &operator=(const Enemy &enemy);
+	virtual ~Enemy();
 
 	int			 getHP() const;
 	std::string	 getType() const;

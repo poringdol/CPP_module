@@ -6,14 +6,14 @@ AWeapon::AWeapon() : Name("empty hands"), APCost(0), Damage(0) {}
 AWeapon::AWeapon(std::string const &name, int apcost, int damage) :
 				Name(name), APCost(apcost), Damage(damage) {}
 
-AWeapon::AWeapon(const AWeapon &aweapon) {*this = aweapon;}
+AWeapon::AWeapon(const AWeapon &aw) {*this = aw;}
 
 AWeapon::~AWeapon() {}
 
-AWeapon	&AWeapon::operator=(const AWeapon &aweapon) {
-	Name = aweapon.Name;
-	APCost = aweapon.APCost;
-	Damage = aweapon.Damage;
+AWeapon	&AWeapon::operator=(const AWeapon &aw) {
+	Name = aw.Name;
+	APCost = aw.APCost;
+	Damage = aw.Damage;
 	return (*this);
 }
 

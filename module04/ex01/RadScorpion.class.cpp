@@ -8,8 +8,8 @@ RadScorpion::RadScorpion() {
 	bornMessage();
 }
 
-RadScorpion::RadScorpion(const RadScorpion &rad_scorpion) {
-	*this = rad_scorpion;
+RadScorpion::RadScorpion(const RadScorpion &rs) {
+	*this = rs;
 	bornMessage();
 }
 
@@ -17,9 +17,9 @@ RadScorpion::~RadScorpion() {
 	deathMessage();
 }
 
-RadScorpion	&RadScorpion::operator=(const RadScorpion &rad_scorpion) {
-	HP = rad_scorpion.HP;
-	Type = rad_scorpion.Type;
+RadScorpion	&RadScorpion::operator=(const RadScorpion &rs) {
+	HP = rs.HP;
+	Type = rs.Type;
 	return (*this);
 }
 
@@ -37,10 +37,10 @@ void		RadScorpion::takeDamage(int damage) {
 	}
 }
 
-void		RadScorpion::bornMessage() {
+void		RadScorpion::bornMessage() const {
 	std::cout << "* click click click *" << std::endl;
 }
 
-void		RadScorpion::deathMessage() {
+void		RadScorpion::deathMessage() const {
 	std::cout << "* SPROTCH *" << std::endl;
 }

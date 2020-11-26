@@ -5,7 +5,7 @@ RED  = \033[0;31m
 GREEN = \033[0;32m
 PURPLE = \033[0;35m
 
-CC = clang++ -std=c++98
+CC = clang++
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
 
@@ -16,25 +16,26 @@ SRC = main.cpp \
 	  Peon.class.cpp \
 	  Dupe.class.cpp \
 	  Fool.class.cpp
-OBJ = $(SRC:.cpp=.o)
-HEADER = Sorcerer.class.hpp \
-	 	 Victim.class.hpp \
-		 Peon.class.hpp \
-		 Dupe.class.hpp \
-		 Fool.class.hpp
 
+OBJS = $(SRC:.cpp=.o)
+OBJDIR = ./objects/
+OBJ = $(addprefix $(OBJDIR), $(OBJS))
+DEP = $(OBJ:.o=.d)
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
 	@echo "$(GREEN)  Executable $(PURPLE)$(NAME) $(GREEN)created  $(B&W)"
-	
-%.o: %.cpp $(HEADER)
-	@$(CC) -c $< -o $@ $(FLAGS)
+
+-include $(DEP)
+
+$(OBJDIR)%.o: %.cpp $(HEADER)
+	@test -d $(OBJDIR) || mkdir $(OBJDIR)
+	@$(CC) -c $< -o $@ $(FLAGS) -MMD
 	@echo "$(GREEN)  Object file $(PURPLE)$@ $(GREEN)created  $(B&W)"
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJDIR)
 
 fclean: clean
 	$(RM) $(NAME)

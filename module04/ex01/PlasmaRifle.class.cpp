@@ -14,14 +14,14 @@ PlasmaRifle::PlasmaRifle(std::string const &name, int apcost, int damage) :
 	setAttackSound();
 }
 
-PlasmaRifle::PlasmaRifle(const PlasmaRifle &PlasmaRifle) {*this = PlasmaRifle;}
+PlasmaRifle::PlasmaRifle(const PlasmaRifle &pr) {*this = pr;}
 
 PlasmaRifle::~PlasmaRifle() {}
 
-PlasmaRifle	&PlasmaRifle::operator=(const PlasmaRifle &PlasmaRifle) {
-	Name = PlasmaRifle.Name;
-	APCost = PlasmaRifle.APCost;
-	Damage = PlasmaRifle.Damage;
+PlasmaRifle	&PlasmaRifle::operator=(const PlasmaRifle &pr) {
+	Name = pr.Name;
+	APCost = pr.APCost;
+	Damage = pr.Damage;
 	return (*this);
 }
 

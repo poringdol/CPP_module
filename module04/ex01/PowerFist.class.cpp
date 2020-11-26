@@ -14,14 +14,14 @@ PowerFist::PowerFist(std::string const &name, int apcost, int damage) :
 	setAttackSound();
 }
 
-PowerFist::PowerFist(const PowerFist &PowerFist) {*this = PowerFist;}
+PowerFist::PowerFist(const PowerFist &pf) {*this = pf;}
 
 PowerFist::~PowerFist() {}
 
-PowerFist	&PowerFist::operator=(const PowerFist &PowerFist) {
-	Name = PowerFist.Name;
-	APCost = PowerFist.APCost;
-	Damage = PowerFist.Damage;
+PowerFist &PowerFist::operator=(const PowerFist &pf) {
+	Name = pf.Name;
+	APCost = pf.APCost;
+	Damage = pf.Damage;
 	return (*this);
 }
 

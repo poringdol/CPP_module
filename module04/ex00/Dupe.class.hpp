@@ -16,14 +16,11 @@ private:
 public:
 	Dupe(std::string);
 	Dupe(const Dupe &);
-	~Dupe();
-
 	Dupe &operator=(const Dupe &);
+	virtual ~Dupe() override;
 
 	std::string	getName() const;
-	void		getPolymorphed() const /*override*/;
+	void		getPolymorphed() const override;
 };
-
-std::ostream &operator<<(std::ostream &stream, const Dupe &dupe);
 
 #endif

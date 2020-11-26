@@ -18,16 +18,14 @@ private:
 
 public:
 	Character(std::string const &name);
-	Character(const Character &character);
+	Character(const Character &);
+	Character &operator=(const Character &);
 	~Character();
-
-	Character &operator=(const Character &character);
 
 	std::string	getName() const;
 	int			getAP() const;
 	AWeapon		*getWeapon() const;
 	void		setName(std::string name);
-	void		setAP(int ap = MAX_AP);
 	void		setWeapon(AWeapon *weapon);
 
 	void 		recoverAP();

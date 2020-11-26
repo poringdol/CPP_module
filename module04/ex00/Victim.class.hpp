@@ -15,9 +15,8 @@ protected:
 public:
 	Victim(std::string);
 	Victim(const Victim &);
-	~Victim();
-
-	Victim &operator=(const Victim &victim);
+	Victim &operator=(const Victim &);
+	virtual ~Victim();
 
 	const std::string	&getName() const;
 	void				introduce() const;

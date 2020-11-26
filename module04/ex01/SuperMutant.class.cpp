@@ -8,16 +8,16 @@ SuperMutant::SuperMutant() {
 	bornMessage();
 }
 
-SuperMutant::SuperMutant(const SuperMutant &super_mutant) {
-	*this = super_mutant;
+SuperMutant::SuperMutant(const SuperMutant &sm) {
+	*this = sm;
 	bornMessage();
 }
 
 SuperMutant::~SuperMutant() {deathMessage();}
 
-SuperMutant	&SuperMutant::operator=(const SuperMutant &super_mutant) {
-	HP = super_mutant.HP;
-	Type = super_mutant.Type;
+SuperMutant	&SuperMutant::operator=(const SuperMutant &sm) {
+	HP = sm.HP;
+	Type = sm.Type;
 	return (*this);
 }
 
@@ -36,10 +36,10 @@ void		SuperMutant::takeDamage(int damage) {
 	}
 }
 
-void		SuperMutant::bornMessage() {
+void		SuperMutant::bornMessage() const {
 	std::cout << "Gaaah. Me want smash heads!" << std::endl;
 }
 
-void		SuperMutant::deathMessage() {
+void		SuperMutant::deathMessage() const {
 	std::cout << "Aaargh..." << std::endl;
 }

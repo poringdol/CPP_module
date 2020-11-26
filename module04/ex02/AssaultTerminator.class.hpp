@@ -11,9 +11,8 @@ private:
 public:
 	AssaultTerminator();
 	AssaultTerminator(const AssaultTerminator &);
-	~AssaultTerminator();
-
 	AssaultTerminator &operator=(const AssaultTerminator &);
+	~AssaultTerminator();
 
 	virtual ISpaceMarine* clone() const override;
 	virtual void battleCry() const override;
