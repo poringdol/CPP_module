@@ -15,12 +15,13 @@ int main() {
 	using std::endl;
 
 	cout << "\n\033[0;35m" << "### Intern CLASS TEST ###\n\n" << "\033[0;0m";
+	Intern intern;
 
 	cout << "Make Shrubbery Creation Form" << endl;
 	try {
-		Intern intern;
 		Form *any = intern.makeForm("Shrubbery Creation", "Marvin");
 		cout << *any << endl;
+		cout << "Target name is " << any->getTarget() << endl;
 
 	} catch (std::exception &ex) {
 		cout << ex.what() << endl;
@@ -29,9 +30,9 @@ int main() {
 
 	cout << "Make Robotomy RequestForm" << endl;
 	try {
-		Intern intern;
 		Form *any = intern.makeForm("Robotomy Request", "Marvin");
 		cout << *any << endl;
+		cout << "Target name is " << any->getTarget() << endl;
 
 	} catch (std::exception &ex) {
 		cout << ex.what() << endl;
@@ -40,9 +41,9 @@ int main() {
 
 	cout << "Make Presidential Pardon Form" << endl;
 	try {
-		Intern intern;
 		Form *any = intern.makeForm("Presidential Pardon", "Marvin");
 		cout << *any << endl;
+		cout << "Target name is " << any->getTarget() << endl;
 
 	} catch (std::exception &ex) {
 		cout << ex.what() << endl;
@@ -51,9 +52,9 @@ int main() {
 
 	cout << "Make Unknown form" << endl;
 	try {
-		Intern intern;
 		Form *any = intern.makeForm("Unknown Form", "Marvin");
 		cout << *any << endl;
+		cout << "Target name is " << any->getTarget() << endl;
 
 	} catch (std::exception &ex) {
 		cout << ex.what() << endl;

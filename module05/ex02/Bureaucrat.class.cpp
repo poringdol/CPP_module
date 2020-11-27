@@ -5,9 +5,9 @@
 Bureaucrat::Bureaucrat() : name("nonanme"), grade(150) {}
 Bureaucrat::Bureaucrat(const std::string& n, int g) : name(n) {
 	if (g < 1)
-		throw GradeTooHighException("Grade should be lower than 1");
+		throw GradeTooHighException("Grade shouldn't be higher than 1");
 	if (g > 150)
-		throw GradeTooLowException("Grade should be higher than 150");
+		throw GradeTooLowException("Grade shouldn't be lower than 150");
 	grade = g;
 }
 Bureaucrat::Bureaucrat(const Bureaucrat& br) : Bureaucrat(br.name, br.grade) {}
@@ -24,12 +24,14 @@ int			Bureaucrat::getGrade() const {return grade;}
 
 void		Bureaucrat::incGrade() {
 	if (grade - 1 < 1)
-		throw GradeTooHighException("Failed increment. Grade should be lower than 1");
+		throw GradeTooHighException("Failed increment. Grade shouldn't be higher than 1");
+	grade--;
 }
 
 void		Bureaucrat::decGrade() {
 	if (grade + 1 > 150)
-		throw GradeTooLowException("Failed decrement. Grade should be higher than 150");
+		throw GradeTooLowException("Failed decrement. Grade shouldn't be lower than 150");
+	grade++;
 }
 
 void		Bureaucrat::signForm(Form& form) {

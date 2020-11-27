@@ -17,8 +17,8 @@ private:
 	PresidentialPardonForm& operator=(const PresidentialPardonForm&);
 
 public:
-	PresidentialPardonForm(const PresidentialPardonForm&);
 	PresidentialPardonForm(const std::string& target);
+	PresidentialPardonForm(const PresidentialPardonForm&);
 	~PresidentialPardonForm();
 
 	virtual void execute(Bureaucrat const&) const override;

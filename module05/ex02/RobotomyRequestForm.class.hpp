@@ -17,8 +17,8 @@ private:
 	RobotomyRequestForm& operator=(const RobotomyRequestForm&);
 
 public:
-	RobotomyRequestForm(const RobotomyRequestForm&);
 	RobotomyRequestForm(const std::string& target);
+	RobotomyRequestForm(const RobotomyRequestForm&);
 	~RobotomyRequestForm();
 
 	virtual void execute(Bureaucrat const&) const override;

@@ -7,8 +7,8 @@ PURPLE = \033[0;35m
 
 CC = clang++ 
 RM = rm -rf
-# FLAGS = -Wall -Werror -Wextra -g
-FLAGS = -g
+FLAGS = -Wall -Werror -Wextra -g
+# FLAGS = -g
 
 NAME = bureaucrat
 SRC = main.cpp \

@@ -8,14 +8,10 @@ PURPLE = \033[0;35m
 CC = clang++ 
 RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
+# FLAGS = -g
 
-NAME = materia
-SRC = main.cpp \
-	  AMateria.class.cpp \
-	  Character.class.cpp \
-	  Cure.class.cpp \
-	  Ice.class.cpp \
-	  MateriaSource.class.cpp
+NAME = cast
+SRC = main.cpp
 
 OBJS = $(SRC:.cpp=.o)
 OBJDIR = ./objects/

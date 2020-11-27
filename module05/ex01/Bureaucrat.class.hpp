@@ -29,23 +29,23 @@ public:
 
 // Exception class
 	class		GradeTooHighException : public myException {
-	private:
-		GradeTooHighException() = default;
 
 	public:
+		GradeTooHighException();
 		GradeTooHighException(const char *mes);
-		GradeTooHighException(const GradeTooHighException&) = default;
-		~GradeTooHighException() = default;
+		GradeTooHighException(const GradeTooHighException&);
+		GradeTooHighException& operator=(const GradeTooHighException&);
+		~GradeTooHighException();
 	};
 
 	class		GradeTooLowException : public myException {
-	protected:
-		GradeTooLowException() = default;
 
 	public:
+		GradeTooLowException();
 		GradeTooLowException(const char *mes);
-		GradeTooLowException(const GradeTooLowException&) = default;
-		~GradeTooLowException() = default;
+		GradeTooLowException(const GradeTooLowException&);
+		GradeTooLowException& operator=(const GradeTooLowException&);
+		~GradeTooLowException();
 	};
 };
 // Exception class

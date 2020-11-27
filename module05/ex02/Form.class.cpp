@@ -16,13 +16,13 @@ Form::Form(const std::string& n, int gts, int gte, const std::string& t)
 				  target(t)
 {
 	if (getGradeToSign() < 1)
-		throw GTH("'Grade to sign' should be lower than 1");
+		throw GTH("'Grade to sign' shouldn't be higher than 1");
 	if (getGradeToExec() < 1)
-		throw GTH("'Grade to exec' should be lower than 1");
+		throw GTH("'Grade to exec' shouldn't be higher than 1");
 	if (getGradeToSign()  > 150)
-		throw GTL("'Grade to sign' should be higher than 150");
+		throw GTL("'Grade to sign' shouldn't be lower than 150");
 	if (getGradeToExec()  > 150)
-		throw GTL("'Grade to exec' should be higher than 150");
+		throw GTL("'Grade to exec' shouldn't be lower than 150");
 }
 
 Form::Form(const Form& f)

@@ -2,12 +2,15 @@
 #include <iostream>
 #include "Bureaucrat.class.hpp"
 
+using BTHE = Bureaucrat::GradeTooHighException;
+using BTLE = Bureaucrat::GradeTooLowException;
+
 Bureaucrat::Bureaucrat() : name("nonanme"), grade(150) {}
 Bureaucrat::Bureaucrat(const std::string& n, int g) : name(n) {
 	if (g < 1)
-		throw GradeTooHighException("Grade should be lower than 1");
+		throw GradeTooHighException();
 	if (g > 150)
-		throw GradeTooLowException("Grade should be higher than 150");
+		throw GradeTooLowException();
 	grade = g;
 }
 Bureaucrat::Bureaucrat(const Bureaucrat& br) : Bureaucrat(br.name, br.grade) {}
@@ -24,12 +27,14 @@ int			Bureaucrat::getGrade() const {return grade;}
 
 void		Bureaucrat::incGrade() {
 	if (grade - 1 < 1)
-		throw GradeTooHighException("Failed increment. Grade should be lower than 1");
+		throw GradeTooHighException("Failed increment, grade too high");
+	grade--;
 }
 
 void		Bureaucrat::decGrade() {
 	if (grade + 1 > 150)
-		throw GradeTooLowException("Failed decrement. Grade should be higher than 150");
+		throw GradeTooLowException("Failed decrement, grade too low");
+	grade++;
 }
 
 void		Bureaucrat::signForm(Form& form) {
@@ -44,11 +49,17 @@ void		Bureaucrat::signForm(Form& form) {
 }
 
 //Exception class
-Bureaucrat::GradeTooHighException::
-			GradeTooHighException(const char *mes) : myException(mes) {}
+BTHE::GradeTooHighException() : myException("Grade shouldn't be higher than 1") {}
+BTHE::GradeTooHighException(const char *mes) : myException(mes) {}
+BTHE::GradeTooHighException(const GradeTooHighException&) : myException() {}
+BTHE& BTHE::operator=(const GradeTooHighException&) {return *this;}
+BTHE::~GradeTooHighException() {}
 
-Bureaucrat::GradeTooLowException::
-			GradeTooLowException(const char *mes) : myException(mes) {}
+BTLE::GradeTooLowException() : myException("Grade shouldn't be lower than 150") {}
+BTLE::GradeTooLowException(const char *mes) : myException(mes) {}
+BTLE::GradeTooLowException(const GradeTooLowException&) : myException() {}
+BTLE& BTLE::operator=(const GradeTooLowException&) {return *this;}
+BTLE::~GradeTooLowException() {}
 //Exception class
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat& br) {
