@@ -18,7 +18,7 @@ private:
 			"Shrubbery Creation",
 			"Robotomy Request",
 			"Presidential Pardon"
-	};
+	}`;
 	Form* (Intern::*arrrayMakeForm[NUM_FORM])(const std::string&) = {
 			&Intern::makeShrubbery,
 			&Intern::makeRobotomy,

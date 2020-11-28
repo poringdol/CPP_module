@@ -10,10 +10,8 @@ RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -g
 # FLAGS = -g
 
-NAME = convert
-SRC = main.cpp \
-	  Cast.cpp \
-	  StaticCast.cpp
+NAME = serialize
+SRC = main.cpp
 
 OBJS = $(SRC:.cpp=.o)
 OBJDIR = ./objects/
