@@ -8,7 +8,7 @@
 using std::cout;
 using std::endl;
 
-template <typename T>
+template<typename T>
 void	convert(std::string literal, T& type) {
 	std::stringstream ss(literal);
 	if ((ss >> type) && ss.eof())

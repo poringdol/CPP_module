@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include <string>w
 
 struct Data {
 	std::string s1;
