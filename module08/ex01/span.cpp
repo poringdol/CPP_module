@@ -34,7 +34,8 @@ void Span::findSpans() {
 unsigned Span::shortestSpan() {
 	if (spans.size() <= 1)
 		throw std::out_of_range("Empty span");
-	return *(std::min(spans.begin(), spans.end()));
+	std::sort(spans.begin(), spans.end());
+	return *(spans.begin());
 }
 
 unsigned Span::longestSpan() {
